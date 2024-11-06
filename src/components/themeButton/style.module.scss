@@ -1,0 +1,24 @@
+@use "../../styles/colors";
+
+.wrapper {
+  height: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  .icon {
+    position: absolute;
+    color: var(--text-light);
+    transform: translateY(30px);
+    transition: transform 0.3s;
+    &.active {
+      transform: translateY(0px);
+    }
+  }
+}

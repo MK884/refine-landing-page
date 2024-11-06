@@ -1,0 +1,7 @@
+@use "./colors";
+
+.main {
+  height: 100dvh;
+  background: var(--page-default);
+  overflow-x: hidden;
+}

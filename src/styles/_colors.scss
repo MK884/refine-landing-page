@@ -1,0 +1,96 @@
+/* colors.scss */
+:root {
+  //page
+  --page-default: #ffffff;
+  --page-weak: #f6f8fa;
+
+  //background
+  --background-surface-layer-01: #F4F8FB;
+  --background-surface-layer-02: #DEE5ED;
+  --background-surface-layer-03: #e4e7eb;
+  --background-inverse: #1b1f24;
+  --background-defualt: #eee;
+
+  //text
+  --text-default: #1b1f24;
+  --text-medium: #2d343b;
+  --text-placeholder: #6a727c;
+  --text-inverse: #f6f8fa;
+  --text-light: #6C7793;
+
+//   brand colors
+--brand-primary: #0080FF;
+
+  //border
+  --border-primary: #ccd1d5;
+  --border-primary-inverse: #646cff;
+  --border-strong: #acb2b9;
+  --border-default: #ccd1d5;
+  --border-weak: #e4e7eb;
+  --border-disabled: #f6f8fa;
+
+  //button
+  --button-primary: #4368e3;
+  // --button-primary: #7F27FF;
+  --button-primary-active: #7f27ff;
+  --button-primary-hover: #864df6;
+  --button-primary-pressed: #7f27ff;
+  --button-primary-disabled: var(--button-primary);
+
+  //controls
+  --switch-tab: #ffffff;
+  --switch-tag: #ccd1d54d;
+  --switch-background-off: #ddd;
+  --switch-background-on: #4368e3;
+  --slider-handle: #ffffff;
+  --slider-track: #e4e7eb;
+  --slider-fill: #4368e3;
+}
+
+[data-theme="dark"] {
+  //page
+  --page-default: #14141F;
+  --page-weak: #242424;
+
+  //background
+
+  --background-surface-layer-01: #1D1E30;
+  --background-surface-layer-02: #303450;
+  --background-surface-layer-03: #3c434b;
+  --background-Inverse: #fafcff;
+  --background-defualt: #121212;
+
+  //text
+  --text-default: #fafcff;
+  --text-medium: #cfd3d8;
+  --text-placeholder: #858c94;
+  --text-inverse: #181b1f;
+  --text-light: #A3ADC2;
+
+  //   brand colors
+--brand-primary: #47EBEB;
+
+  //border
+  --border-primary: #646cff;
+  --border-primary-inverse: #7d858d;
+  --border-strong: #303452;
+  --border-default: #3c434b;
+  --border-weak: #2b3036;
+
+  //button
+  //button
+  // --button-primary: #4A6DD9;
+  --button-primary: #1a1a1a;
+  --button-primary-hover: none;
+  --button-primary-pressed: #1e2226;
+  --button-primary-disabled: #3d3a3a;
+
+  //controls
+  --switch-tab: #2b3036;
+  --switch-tag: #121518;
+  --switch-background-off: #121518;
+  --switch-background-on: #4a6dd9;
+  --slider-handle: #121518;
+  --slider-track: #2b3036;
+  --slider-fill: #4a6dd9;
+}
