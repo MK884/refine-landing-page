@@ -3,9 +3,11 @@ import React from "react";
 const ThemeContext = React.createContext<{
   theme: Theme;
   toggleTheme: () => void;
+  changeThemeTo: (theme:Theme) => void;
 }>({
   theme: "dark",
   toggleTheme: () => {},
+  changeThemeTo: () => {},
 });
 
 export const ThemeProvider = ({
@@ -26,13 +28,19 @@ export const ThemeProvider = ({
     localStorage.setItem("refine-theme", newTheme);
   };
 
+  const changeThemeTo = (theme:Theme) => {
+    if(!theme) return;
+    setTheme(theme);
+    localStorage.setItem("refine-theme", theme);
+  }
+
   React.useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     return () => document.documentElement.removeAttribute("data-theme");
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, changeThemeTo }}>
       {children}
     </ThemeContext.Provider>
   );

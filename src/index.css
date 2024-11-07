@@ -74,6 +74,6 @@ button:focus-visible {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  color: var(--text-default);
-
+  /* color: var(--text-default); */
+  font-family: sans-serif, ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }

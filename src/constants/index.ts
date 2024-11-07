@@ -12,7 +12,7 @@ import { SiRefine } from "react-icons/si";
 import { CgShoppingBag } from "react-icons/cg";
 import { TbBrandTelegram } from "react-icons/tb";
 
-interface INav {
+export interface INav {
   title: string;
   subItems?: Array<ISubNav>;
 }
@@ -44,24 +44,6 @@ export const nav: Array<INav> = [
       },
       {
         icon: {
-          Icon: FaGlasses,
-          color: "cyan",
-        },
-        title: "Awesome Refine",
-        caption: "Repository of awesome things.",
-        link: "https://github.com/refinedev/awesome-refine",
-      },
-      {
-        icon: {
-          Icon: CiGlobe,
-          color: "indigo",
-        },
-        title: "Templates",
-        caption: "Ready-made examples for your project.",
-        link: "https://refine.dev/templates/",
-      },
-      {
-        icon: {
           Icon: TbDeviceTv,
           color: "green",
         },
@@ -71,12 +53,30 @@ export const nav: Array<INav> = [
       },
       {
         icon: {
+          Icon: FaGlasses,
+          color: "cyan",
+        },
+        title: "Awesome Refine",
+        caption: "Repository of awesome things.",
+        link: "https://github.com/refinedev/awesome-refine",
+      },
+      {
+        icon: {
           Icon: TbPuzzle,
           color: "pink",
         },
         title: "Integration",
         caption: "Discover the refone ecosystem.",
         link: "https://refine.dev/integrations/",
+      },
+      {
+        icon: {
+          Icon: CiGlobe,
+          color: "indigo",
+        },
+        title: "Templates",
+        caption: "Ready-made examples for your project.",
+        link: "https://refine.dev/templates/",
       },
       {
         icon: {
