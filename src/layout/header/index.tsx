@@ -16,7 +16,6 @@ import { FaChevronRight } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import { useTheme } from "@/context";
 
-
 // main header
 function Header() {
   return (
@@ -100,13 +99,13 @@ function CommunityFooter() {
       <p>Join the party!</p>
       <div>
         <a href="https://github.com/refinedev/refine" target="_blank">
-          <FaGithub size={20} />
+          <FaGithub size={18} color="var(--text-default)" />
         </a>
         <a href="https://discord.com/invite/refine" target="_blank">
-          <FaDiscord size={20} />
+          <FaDiscord size={20} color="#5865f2" />
         </a>
         <a href="https://x.com/refine_dev" target="_blank">
-          <FaTwitter size={20} />
+          <FaTwitter size={20} color="#6EB3F7" />
         </a>
       </div>
     </div>

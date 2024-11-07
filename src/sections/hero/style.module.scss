@@ -1,0 +1,65 @@
+@use "../../styles/colors";
+.section {
+  margin-top: 5rem;
+  .info {
+    padding-block: 2rem;
+    padding-left: 2.5rem;
+    .star_github {
+      all: unset;
+      border-radius: 9999px;
+      cursor: pointer;
+      position: relative;
+      padding: 1px;
+      background-color: var(--border-strong);
+      isolation: isolate;
+      overflow: hidden;
+      .btn {
+        background-color: var(--page-default);
+        border-radius: 9999px;
+        color: var(--text-light);
+        padding: 0.4rem 0.6rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.75rem;
+        font-weight: 400;
+        span {
+          font-weight: 700;
+        }
+        .star {
+          margin-right: 0.4rem;
+          &:is([data-theme="dark"] *) {
+            filter: drop-shadow(0px 0px 3px #ff993330)
+              drop-shadow(0px 0px 6px #ff9933a0)
+              drop-shadow(0px 0px 16px #ff9933a0) drop-shadow(0px 0px 16px #f93);
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 6rem;
+        filter: blur(24px);
+        aspect-ratio: 1;
+        background-color: rgba(255, 153, 51, 0.4);
+        border-radius: 9999px;
+        top: -2rem;
+        left: -2rem;
+        z-index: -1;
+        animation: 10s linear infinite alternate move-in-x;
+      }
+    }
+  }
+}
+
+// animation
+@keyframes move-in-x {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(180px);
+  }
+}

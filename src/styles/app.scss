@@ -5,4 +5,12 @@
   background: var(--page-default);
   overflow-x: hidden;
   color: var(--text-default);
+  .container_box{
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 10rem;
+  }
 }

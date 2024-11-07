@@ -1,6 +1,6 @@
 import "@/styles/app.scss";
 import { Header } from "@/layout";
-import { ThemeButton } from "./components";
+import { HeroSection } from "@/sections";
 
 function App() {
   return (
@@ -8,13 +8,9 @@ function App() {
       <div className="main">
         <Header />
         <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            height: '100dvh'
-          }}
+         className='container_box'
         >
-         <p>textxxtasg sagsg</p>
+         <HeroSection />
 
         </div>
       </div>
