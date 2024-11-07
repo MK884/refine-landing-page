@@ -12,7 +12,6 @@ header {
   z-index: 9999;
   .nav,
   nav {
-    background: transparent;
     margin-inline: auto;
     width: 100%;
     height: 100%;
@@ -23,7 +22,7 @@ header {
   }
   .left {
     display: flex;
-    a {
+    .a {
       min-width: 10rem;
     }
     .menus {
@@ -90,16 +89,15 @@ header {
       translate: -50%;
       display: none;
       animation: fade 0.1s linear;
-      border-top:1px solid var(--background-surface-layer-02) ;
-      border-left:1px solid var(--background-surface-layer-02);
+      border-top: 1px solid var(--background-surface-layer-02);
+      border-left: 1px solid var(--background-surface-layer-02);
     }
   }
   .subMenu {
     position: absolute;
-    height: 5rem;
-    max-width: 35rem;
     background-color: transparent;
     display: none;
+    overflow: hidden;
     &.center {
       left: 50%;
       translate: -50%;
@@ -108,11 +106,10 @@ header {
       background-color: var(--page-default);
       border-radius: 10px;
       margin-top: 1.5rem;
-      padding: 1rem;
       box-shadow: 0.5px 0.5px 4px var(--background-surface-layer-02),
         -0.5px -0.5px 4px var(--background-surface-layer-02);
       animation: fade 0.1s linear;
-      border: 1px solid  var(--background-surface-layer-02);
+      border: 1px solid var(--background-surface-layer-02);
     }
   }
 
@@ -121,6 +118,120 @@ header {
     .subMenu {
       display: block;
     }
+  }
+}
+
+.grid__container {
+  padding: 1rem;
+  display: grid;
+  &.grid_col_1 {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+  &.grid_col_2 {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+  .item a {
+    display: flex;
+    text-decoration: none;
+    gap: 10px;
+    padding: 1.6rem 0.685rem;
+    border-radius: 12px;
+    &:hover {
+      background-color: var(--background-surface-layer-01);
+    }
+    .icon_box {
+      height: 40px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.blue {
+        background-color: var(--background-blue);
+      }
+      &.green {
+        background-color: var(--background-green);
+      }
+      &.cyan {
+        background-color: var(--background-cyan);
+      }
+      &.pink {
+        background-color: var(--background-pink);
+      }
+      &.yellow {
+        background-color: var(--background-yellow);
+      }
+      &.indigo {
+        background-color: var(--background-indigo);
+      }
+      .icon {
+        &.blue {
+          color: var(--text-blue);
+        }
+        &.green {
+          color: var(--text-green);
+        }
+        &.cyan {
+          color: var(--text-cyan);
+        }
+        &.pink {
+          color: var(--text-pink);
+        }
+        &.yellow {
+          color: var(--text-yellow);
+        }
+        &.indigo {
+          color: var(--text-indigo);
+        }
+      }
+    }
+    .info {
+      .title {
+        font-weight: 600;
+        color: var(--text-default);
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+      }
+      .caption {
+        font-weight: 600;
+        color: var(--text-placeholder);
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+.os__footer {
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--background-surface-layer-01);
+  padding: 1rem;
+  border-top: 1px solid var(--background-surface-layer-02);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+  }
+}
+.com__footer {
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--background-surface-layer-01);
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--background-surface-layer-02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  div{
+    display: flex;
+    gap: 10px;
+  }
+  p {
+    color: var(--text-light);
+    font-size: 1.2rem;
   }
 }
 

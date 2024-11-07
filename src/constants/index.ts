@@ -17,7 +17,7 @@ interface INav {
   subItems?: Array<ISubNav>;
 }
 
-interface ISubNav {
+export interface ISubNav {
   link?: string;
   title: string;
   caption?: string;
@@ -25,8 +25,8 @@ interface ISubNav {
 }
 
 interface IMenuIcon {
-  color?: string;
-  Icon?: IconType;
+  color: "blue" | "green" | "cyan" | "yellow" | "pink" | "indigo";
+  Icon: IconType;
 }
 
 export const nav: Array<INav> = [
@@ -36,6 +36,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: IoDocumentTextOutline,
+          color: "blue",
         },
         title: "Documentation",
         caption: "Everything you need to get started.",
@@ -44,6 +45,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: FaGlasses,
+          color: "cyan",
         },
         title: "Awesome Refine",
         caption: "Repository of awesome things.",
@@ -52,6 +54,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: CiGlobe,
+          color: "indigo",
         },
         title: "Templates",
         caption: "Ready-made examples for your project.",
@@ -60,6 +63,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: TbDeviceTv,
+          color: "green",
         },
         title: "Tutorial",
         caption: "Create your first refine application.",
@@ -68,6 +72,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: TbPuzzle,
+          color: "pink",
         },
         title: "Integration",
         caption: "Discover the refone ecosystem.",
@@ -76,6 +81,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: FiEdit3,
+          color: "yellow",
         },
         title: "Blog",
         caption: "Articles about web development.",
@@ -92,6 +98,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: TfiComments,
+          color: "green",
         },
         title: "Contributing",
         caption: "Join open-source contributors.",
@@ -100,6 +107,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: PiCalendarDotsBold,
+          color: "indigo",
         },
         title: "Refine Week",
         caption: "Weekly projects to practice refine.",
@@ -108,6 +116,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: CiTrophy,
+          color: "yellow",
         },
         title: "Hackathons",
         caption: "Compete in hackathons and earn prizes!",
@@ -121,6 +130,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: SiRefine,
+          color: "cyan",
         },
         title: "About Refine",
         caption: "Team & company information.",
@@ -129,6 +139,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: CgShoppingBag,
+          color: "green",
         },
         title: "Swag Store",
         caption: "T-shirts, caps & more!",
@@ -137,6 +148,7 @@ export const nav: Array<INav> = [
       {
         icon: {
           Icon: TbBrandTelegram,
+          color: "pink",
         },
         title: "Meet Refine",
         caption: "Call us for any questions.",
