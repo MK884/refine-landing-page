@@ -13,6 +13,9 @@
       background-color: var(--border-strong);
       isolation: isolate;
       overflow: hidden;
+      a {
+        text-decoration: none;
+      }
       .btn {
         background-color: var(--page-default);
         border-radius: 9999px;
@@ -37,7 +40,7 @@
         }
       }
 
-      &::after {
+      &:is([data-theme="dark"] *)::after {
         content: "";
         position: absolute;
         height: 6rem;

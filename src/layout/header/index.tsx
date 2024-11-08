@@ -31,6 +31,7 @@ function Header() {
                 title={item.title}
                 key={item.title}
                 isCenter={idx !== 0}
+                indicator={idx === 1 ? <NewBtn /> : undefined}
                 subMenu={
                   item?.subItems && (
                     <SubElement
@@ -70,6 +71,14 @@ function Header() {
 }
 
 export default Header;
+
+const NewBtn = () => {
+  return (
+    <div className={style.new_btn}>
+      <p>new</p>
+    </div>
+  );
+};
 
 const footerComponents = [
   <OpenSourceFooter />,
@@ -116,15 +125,18 @@ const Menu = ({
   title,
   subMenu,
   isCenter = true,
+  indicator,
 }: {
   title: string;
   subMenu?: React.ReactElement;
   isCenter?: boolean;
+  indicator?: React.ReactElement;
 }) => {
   return (
     <div className={style.menu}>
       <div className={style.title}>
         {title}
+        {indicator}
         {subMenu && (
           <>
             <MdKeyboardArrowDown />
@@ -237,11 +249,19 @@ function BurgerNav() {
       {isOpen && (
         <div className={style.container}>
           <div className={style.content}>
-            {nav?.map((item) => (
-              <NavSections navItems={item} key={item.title} />
+            {nav?.map((item, idx) => (
+              <NavSections
+                navItems={item}
+                key={item.title}
+                indicator={idx === 1 ? <NewBtn /> : undefined}
+              />
             ))}
-            {nav?.map((item) => (
-              <MobileNav navItems={item} key={item.title} />
+            {nav?.map((item, idx) => (
+              <MobileNav
+                navItems={item}
+                key={item.title}
+                indicator={idx === 1 ? <NewBtn /> : undefined}
+              />
             ))}
             <ThemeApperance />
             <OpenSourceFooter />
@@ -252,16 +272,25 @@ function BurgerNav() {
   );
 }
 
-const NavSections = ({ navItems }: { navItems: INav }) => {
+const NavSections = ({
+  navItems,
+  indicator,
+}: {
+  navItems: INav;
+  indicator?: React.ReactElement;
+}) => {
   const subItems = navItems?.subItems;
   return (
     <div className={style.nav_section}>
-      <p
-        className={style.nav_title}
-        style={{ marginBottom: subItems ? 10 : 0 }}
-      >
-        {navItems.title}
-      </p>
+      <div className={style.nav_indi}>
+        <p
+          className={style.nav_title}
+          style={{ marginBottom: subItems ? 10 : 0 }}
+        >
+          {navItems.title}
+        </p>
+        {indicator}
+      </div>
       {subItems && (
         <div className={`${style.nav_grid}`}>
           {subItems?.map((item) => (
@@ -273,7 +302,13 @@ const NavSections = ({ navItems }: { navItems: INav }) => {
   );
 };
 
-function MobileNav({ navItems }: { navItems: INav }) {
+function MobileNav({
+  navItems,
+  indicator,
+}: {
+  navItems: INav;
+  indicator?: React.ReactElement;
+}) {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
   const toggle = () => setIsOpen((prev) => !prev);
@@ -282,7 +317,10 @@ function MobileNav({ navItems }: { navItems: INav }) {
   return (
     <div className={style.mob_nav}>
       <div className={style.mob_nav_header} onClick={toggle}>
-        <p className={style.nav_title}>{navItems.title}</p>
+        <div className={style.nav_indi}>
+          <p className={style.nav_title}>{navItems.title}</p>
+          {indicator}
+        </div>
         {subItems && (
           <div className={style.indicator}>
             {isOpen ? <FaChevronDown size={8} /> : <FaChevronRight size={8} />}
