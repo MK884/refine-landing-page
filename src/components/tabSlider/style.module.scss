@@ -1,0 +1,55 @@
+@use "../../styles/colors";
+
+.container {
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--background-surface-layer-01);
+  .tabs {
+    position: relative;
+    background-color: var(--page-default);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    isolation: isolate;
+    overflow: hidden;
+    .tab {
+      all: unset;
+      width: 100%;
+      border-radius: 999px;
+      padding-block: 0.875rem;
+      padding-inline: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      cursor: pointer;
+      span {
+        color: var(--text-light);
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+      }
+    }
+    .pill {
+      background-color: var(--background-surface-layer-02);
+      position: absolute;
+      z-index: -1;
+      border-radius: 999px;
+      height: 100%;
+      transition: 0.3s;
+    //   width: calc(25% - 10px);
+    }
+  }
+  .body {
+    height: 736px;
+    background-color: var(--page-default);
+    overflow: hidden;
+    border-radius: 18px;
+  }
+}

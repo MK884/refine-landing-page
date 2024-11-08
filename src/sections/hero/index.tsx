@@ -3,6 +3,27 @@ import style from "./style.module.scss";
 import { FaStar } from "react-icons/fa6";
 import { CiPlay1 } from "react-icons/ci";
 import { MdDone } from "react-icons/md";
+import { TabSlider } from "@/components";
+
+
+const tabsData: Array<ITabs> = [
+  {
+    title: 'CRM Application',
+    body: <p>CRM Application</p>
+  },
+  {
+    title: 'E-Commerce Application',
+    body: <p>E-Commerce Application</p>
+  },
+  {
+    title: 'HR Application',
+    body: <p>HR Application</p>
+  },
+  {
+    title: 'DevOps Dashboard',
+    body: <p>DevOps Dashboard</p>
+  },
+];
 
 function HeroSection() {
   const [isClicked, setIsClicked] = React.useState<boolean>(false);
@@ -63,6 +84,7 @@ function HeroSection() {
           </button>
         </div>
       </div>
+      <TabSlider data={tabsData} />
     </section>
   );
 }

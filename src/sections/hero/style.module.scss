@@ -1,6 +1,9 @@
 @use "../../styles/colors";
 .section {
   margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
   .info {
     padding-block: 2rem;
     padding-left: 2.5rem;
