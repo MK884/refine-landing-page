@@ -4,6 +4,10 @@
   .info {
     padding-block: 2rem;
     padding-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
     .star_github {
       all: unset;
       border-radius: 9999px;
@@ -13,6 +17,7 @@
       background-color: var(--border-strong);
       isolation: isolate;
       overflow: hidden;
+      width: fit-content;
       a {
         text-decoration: none;
       }
@@ -55,6 +60,138 @@
       }
     }
   }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 60%;
+    h1 {
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 72px;
+    }
+    .caption {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-medium);
+      max-width: 60%;
+      line-height: 1.5rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    .doc_btn {
+      all: unset;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 6px;
+      background-color: var(--brand-primary);
+      color: var(--text-inverse);
+      padding: 0.75rem;
+      padding-right: 1.2rem;
+      font-weight: 550;
+      font-size: 1rem;
+      border-radius: 999px;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: filter 0.1s;
+      &:hover {
+        filter: brightness(118%);
+      }
+    }
+    .npm_btn {
+      all: unset;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      justify-content: start;
+      border-radius: 999px;
+      padding-block: 0.75rem;
+      position: relative;
+      cursor: pointer;
+      padding-inline: 1.5rem;
+      background-color: var(--brand-primary-bg);
+      span {
+        color: var(--brand-primary);
+        font-size: 12px;
+        line-height: 1.5rem;
+        word-spacing: 0.5rem;
+      }
+      .icon {
+        background-color: var(--brand-primary);
+        border-radius: 50%;
+        height: 1rem;
+        aspect-ratio: 1;
+        color: var(--text-inverse);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: -30px;
+        animation: translateX 2s 1s ease-out alternate;
+      }
+      .npm {
+        position: relative;
+        .copy {
+          inset: 0;
+          color: var(--brand-primary);
+          width: 0;
+          height: 100%;
+          font-size: 12px;
+          line-height: 1.5rem;
+          word-spacing: 0.5rem;
+          background-color: var(--brand-primary-bg);
+          position: absolute;
+          white-space: nowrap;
+          overflow: hidden;
+          opacity: 0;
+          animation: reveal 4s linear;
+          &::after {
+            content: attr(data-text);
+            inset: 0;
+            color: transparent;
+            position: absolute;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+          &::before {
+            height: 100%;
+            width: 6px;
+            background-color: white;
+            position: absolute;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateX(0px);
+            animation: 1.8s text-reveal linear;
+          }
+        }
+      }
+      .bg {
+        background-image: radial-gradient(#0000 40%, var(--brand-primary));
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: 0.15s;
+        scale: 2;
+        opacity: 0;
+      }
+      &:hover {
+        .bg {
+          opacity: 1;
+          scale: 1.5;
+        }
+      }
+    }
+  }
 }
 
 // animation
@@ -63,6 +200,70 @@
     transform: translateX(-10px);
   }
   to {
-    transform: translateX(180px);
+    transform: translateX(100px);
+  }
+}
+
+@keyframes translateX {
+  0% {
+    right: -30px;
+  }
+  25%,
+  50%,
+  60%,
+  75%,
+  85% {
+    right: 20px;
+  }
+  100% {
+    right: -30px;
+  }
+}
+
+@keyframes text-reveal {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  10% {
+    width: 10%;
+    opacity: 1;
+  }
+  30% {
+    width: 30%;
+    opacity: 1;
+  }
+  20% {
+    width: 60%;
+    opacity: 1;
+  }
+  30% {
+    width: 100%;
+    opacity: 1;
+  }
+  40%,
+  60%,
+  70%,
+  80% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  90% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 0%;
+    opacity: 0;
   }
 }
