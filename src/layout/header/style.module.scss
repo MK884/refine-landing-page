@@ -5,7 +5,7 @@ header {
   color: var(--text-default);
   position: sticky;
   top: 0;
-  background-color: rgba(10, 10, 40, 0.01);
+  background-color: var(--background-light);
   backdrop-filter: blur(8px);
   padding: 0 2rem;
   width: 100dvw;

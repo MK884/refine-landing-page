@@ -1,3 +1,4 @@
+import CodeBlock from "./codeBlock";
 import CRM from "./crm";
 import DevOps from "./devops";
 import DotWave from "./dot";
@@ -18,4 +19,5 @@ export {
   HR,
   CRM,
   DotWave,
+  CodeBlock,
 };
