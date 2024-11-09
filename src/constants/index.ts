@@ -157,3 +157,18 @@ export const nav: Array<INav> = [
     ],
   },
 ];
+
+export const img = [
+  {
+    src: 'https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/crm/base-render.png'
+  },
+  {
+    src: 'https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/finefoods/base_render-2.png'
+  },
+  {
+    src: 'https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/hr2/base_render.png'
+  },
+  {
+    src: 'https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/devops/base_render.png'
+  },
+]

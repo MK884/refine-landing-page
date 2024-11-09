@@ -1,0 +1,45 @@
+@use "../../styles/colors";
+
+.dot {
+  height: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--brand-primary);
+  position: relative;
+  filter: brightness(90%);
+  &:after,
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--brand-primary);
+    filter: brightness(80%);
+    border-radius: 50%;
+  }
+  &::after {
+    animation: 1s pulse infinite linear;
+  }
+  &::before {
+    animation: 1s 0.2s pulse infinite linear;
+  }
+  .wave {
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--brand-primary);
+    filter: brightness(80%);
+    border-radius: 50%;
+    animation: 1s 0.4s pulse infinite linear;
+  }
+}
+
+// animation
+@keyframes pulse {
+  from {
+    scale: 0;
+    opacity: 1;
+  }
+  to {
+    scale: 2.5;
+    opacity: 0;
+  }
+}

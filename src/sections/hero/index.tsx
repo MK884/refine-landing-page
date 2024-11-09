@@ -3,37 +3,35 @@ import style from "./style.module.scss";
 import { FaStar } from "react-icons/fa6";
 import { CiPlay1 } from "react-icons/ci";
 import { MdDone } from "react-icons/md";
-import { TabSlider } from "@/components";
-
+import { CRM, ECommerce, HR, TabSlider, DevOps } from "@/components";
 
 const tabsData: Array<ITabs> = [
   {
-    title: 'CRM Application',
-    body: <p>CRM Application</p>
+    title: "CRM Application",
+    body: <CRM />,
   },
   {
-    title: 'E-Commerce Application',
-    body: <p>E-Commerce Application</p>
+    title: "E-Commerce Application",
+    body: <ECommerce />,
   },
   {
-    title: 'HR Application',
-    body: <p>HR Application</p>
+    title: "HR Application",
+    body: <HR />,
   },
   {
-    title: 'DevOps Dashboard',
-    body: <p>DevOps Dashboard</p>
+    title: "DevOps Dashboard",
+    body: <DevOps />,
   },
 ];
 
 function HeroSection() {
   const [isClicked, setIsClicked] = React.useState<boolean>(false);
 
-
-  const npm_command = 'npm create refine-app@latest'
+  const npm_command = "npm create refine-app@latest";
 
   const handleClickNpm = () => {
     setIsClicked(true);
-    navigator.clipboard.writeText(npm_command)
+    navigator.clipboard.writeText(npm_command);
     setTimeout(() => setIsClicked(false), 5000);
   };
 
@@ -62,10 +60,7 @@ function HeroSection() {
             see docs
           </button>
           <button className={style.npm_btn} onClick={handleClickNpm}>
-            <span
-              data-text={npm_command}
-              className={style.npm}
-            >
+            <span data-text={npm_command} className={style.npm}>
               {npm_command}
               {isClicked && (
                 <>
