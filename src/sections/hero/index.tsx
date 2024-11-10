@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 import { FaStar } from "react-icons/fa6";
 import { CiPlay1 } from "react-icons/ci";
 import { MdDone } from "react-icons/md";
-import { TabSlider, TabBody } from "@/components";
+import { TabSlider, TabBody, CompanyTestimonial } from "@/components";
 import { npm_command, tabsData } from "@/constants";
 
 const tabs: Array<ITabs> = [
@@ -79,6 +79,7 @@ function HeroSection() {
         </div>
       </div>
       <TabSlider data={tabs} />
+      <CompanyTestimonial />
     </section>
   );
 }

@@ -1,16 +1,25 @@
+import Amazon from "@/assets/amazon.svg?react";
+import Atlassion from "@/assets/atlassian.svg?react";
+import Autodesk from "@/assets/autodesk.svg?react";
+import Cisco from "@/assets/cisco.svg?react";
+import Deloitte from "@/assets/deloitte.svg?react";
+import Ibm from "@/assets/ibm.svg?react";
+import Intel from "@/assets/intel.svg?react";
+import Jp from "@/assets/jp-morgan.svg?react";
+import Meta from "@/assets/meta.svg?react";
+import Oracle from "@/assets/oracle.svg?react";
+import Salesforce from "@/assets/salesforce.svg?react";
+import Upwork from "@/assets/upwork.svg?react";
 import { IconType } from "react-icons";
-import { IoDocumentTextOutline } from "react-icons/io5";
-import { FaGlasses } from "react-icons/fa6";
-import { CiGlobe } from "react-icons/ci";
-import { TbDeviceTv } from "react-icons/tb";
-import { TbPuzzle } from "react-icons/tb";
-import { FiEdit3 } from "react-icons/fi";
-import { TfiComments } from "react-icons/tfi";
-import { PiCalendarDotsBold } from "react-icons/pi";
-import { CiTrophy } from "react-icons/ci";
-import { SiRefine } from "react-icons/si";
 import { CgShoppingBag } from "react-icons/cg";
-import { TbBrandTelegram } from "react-icons/tb";
+import { CiGlobe, CiTrophy } from "react-icons/ci";
+import { FaGlasses } from "react-icons/fa6";
+import { FiEdit3 } from "react-icons/fi";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { PiCalendarDotsBold } from "react-icons/pi";
+import { SiRefine } from "react-icons/si";
+import { TbBrandTelegram, TbDeviceTv, TbPuzzle } from "react-icons/tb";
+import { TfiComments } from "react-icons/tfi";
 
 export interface INav {
   title: string;
@@ -30,7 +39,6 @@ interface IMenuIcon {
 }
 
 export const npm_command = "npm create refine-app@latest";
-
 
 export const nav: Array<INav> = [
   {
@@ -487,5 +495,56 @@ export const tabsData: Array<ITabBody> = [
     });`,
       },
     ],
+  },
+];
+
+export const companies: Array<IIcons> = [
+  {
+    id: 1,
+    icon: <Amazon />,
+  },
+  {
+    id: 2,
+    icon: <Atlassion />,
+  },
+  {
+    id: 3,
+    icon: <Autodesk />,
+  },
+  {
+    id: 4,
+    icon: <Cisco />,
+  },
+  {
+    id: 5,
+    icon: <Deloitte />,
+  },
+  {
+    id: 6,
+    icon: <Ibm />,
+  },
+  {
+    id: 7,
+    icon: <Intel />,
+  },
+  {
+    id: 8,
+    icon: <Jp />,
+  },
+  {
+    id: 9,
+    icon: <Meta />,
+  },
+  {
+    id: 10,
+    icon: <Oracle />,
+  },
+  {
+    id: 11,
+    icon: <Salesforce />,
+  },
+  {
+    id: 12,
+    icon: <Upwork />,
   },
 ];

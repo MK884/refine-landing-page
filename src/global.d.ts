@@ -18,3 +18,8 @@ interface ITabBody {
   btnName: string;
   items: Array<IItems>;
 }
+
+interface IIcons {
+  id: number;
+  icon?: React.ReactElement;
+}
