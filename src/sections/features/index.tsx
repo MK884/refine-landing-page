@@ -16,7 +16,7 @@ function Features() {
   };
 
   return (
-    <div className={style.container}>
+    <section className={style.section}>
       <div className={style.box}>
         <h2>
           The <span>sweet spot</span> between low-code and full-code.
@@ -105,7 +105,7 @@ function Features() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
