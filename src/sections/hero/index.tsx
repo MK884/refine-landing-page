@@ -3,31 +3,30 @@ import style from "./style.module.scss";
 import { FaStar } from "react-icons/fa6";
 import { CiPlay1 } from "react-icons/ci";
 import { MdDone } from "react-icons/md";
-import { CRM, ECommerce, HR, TabSlider, DevOps } from "@/components";
+import { TabSlider, TabBody } from "@/components";
+import { npm_command, tabsData } from "@/constants";
 
-const tabsData: Array<ITabs> = [
+const tabs: Array<ITabs> = [
   {
     title: "CRM Application",
-    body: <CRM />,
+    body: <TabBody item={tabsData[0]} />,
   },
   {
     title: "E-Commerce Application",
-    body: <ECommerce />,
+    body: <TabBody item={tabsData[1]} />,
   },
   {
     title: "HR Application",
-    body: <HR />,
+    body: <TabBody item={tabsData[2]} />,
   },
   {
     title: "DevOps Dashboard",
-    body: <DevOps />,
+    body: <TabBody item={tabsData[3]} />,
   },
 ];
 
 function HeroSection() {
   const [isClicked, setIsClicked] = React.useState<boolean>(false);
-
-  const npm_command = "npm create refine-app@latest";
 
   const handleClickNpm = () => {
     setIsClicked(true);
@@ -79,7 +78,7 @@ function HeroSection() {
           </button>
         </div>
       </div>
-      <TabSlider data={tabsData} />
+      <TabSlider data={tabs} />
     </section>
   );
 }

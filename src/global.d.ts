@@ -9,5 +9,12 @@ interface IItems {
   id: number;
   src: string;
   code: string;
-  flexDirection?: React.CSSProperties["flexDirection"];
+}
+
+interface ITabBody {
+  src: string;
+  name: string;
+  href: string;
+  btnName: string;
+  items: Array<IItems>;
 }

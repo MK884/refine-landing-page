@@ -53,3 +53,363 @@
     border-radius: 18px;
   }
 }
+
+.box {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+  .banner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .demo_btn a {
+    all: unset;
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    translate: -50%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 6px;
+    background-color: var(--brand-primary);
+    color: var(--text-inverse);
+    padding: 1.2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 999px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.2s;
+    .indicator {
+      height: 1rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1.5px solid var(--text-placeholder);
+      display: flex;
+      color: var(--text-placeholder);
+      justify-content: center;
+      align-items: center;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &:hover {
+    .demo_btn a {
+      bottom: 5%;
+    }
+  }
+  .blur {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    display: none;
+    z-index: 2;
+  }
+  .dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .item {
+    position: absolute;
+    transition: 0.3s;
+    .code_editor {
+      background-color: #212121;
+      scale: 0;
+      border-radius: 1rem;
+      transform-origin: top left;
+      transition: scale 0.1s;
+      height: fit-content;
+      position: absolute;
+      top: 0px;
+    }
+    img{
+      border-radius: 1rem;
+    }
+    &:hover {
+      z-index: 6;
+      img {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      }
+      .code_editor {
+        scale: 1;
+      }
+    }
+  }
+
+  .item_1 {
+    --width: 200px;
+    left: 12px;
+    top: 88px;
+    width: 200px;
+    .code_editor {
+      left: var(--width);
+      margin-left: 20px;
+    }
+    img {
+      width: var(--width);
+      height: 376px;
+    }
+  }
+  .item_2 {
+    --width: 296px;
+    left: 224px;
+    top: 88px;
+    width: var(--wdith);
+    img {
+      width: var(--width);
+      height: 136px;
+    }
+    .code_editor {
+      left: var(--width);
+      margin-left: 20px;
+    }
+  }
+  .item_3 {
+    --width: 296px;
+    left: 224px;
+    top: 240px;
+    width: var(--width);
+    .code_editor {
+      left: var(--width);
+      margin-left: 20px;
+    }
+    img {
+      width: var(--width);
+      height: 472px;
+    }
+  }
+  .item_4 {
+    --height: 32px;
+    left: 456px;
+    top: 16px;
+    width: 256px;
+    .code_editor {
+      left: 0;
+      top: var(--height);
+      margin-top: 20px;
+    }
+    img {
+      width: 256px;
+      height: 32px;
+    }
+  }
+  .item_5 {
+    --width: 608px;
+    left: 536px;
+    top: 240px;
+    width: var(--width);
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+    img {
+      width: var(--width);
+      height: 472px;
+    }
+  }
+  .item_6 {
+    --width: 32px;
+    left: 1120px;
+    top: 16px;
+    width: var(--width);
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+    img {
+      width: var(--width);
+      height: 32px;
+    }
+  }
+
+  .item_7 {
+    --width: 152px;
+    width: var(--width);
+    left: 8px;
+    top: 216px;
+    .code_editor {
+      left: var(--width);
+      margin-left: 20px;
+    }
+    img {
+      width: var(--width);
+      height: 120px;
+    }
+  }
+  .item_8 {
+    --width: 616px;
+    width: var(--wdith);
+    left: 184px;
+    top: 168px;
+    img {
+      width: var(--width);
+      height: 360px;
+    }
+    .code_editor {
+      left: var(--width);
+      margin-left: 20px;
+    }
+  }
+  .item_9 {
+    --width: 108px;
+    width: var(--width);
+    left: 811px;
+    top: 10px;
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+    img {
+      width: var(--width);
+      height: 44px;
+    }
+  }
+  .item_10 {
+    --width: 204px;
+    left: 956px;
+    top: 92px;
+    width: var(--width);
+
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+    img {
+      width: var(--width);
+      height: 48px;
+    }
+  }
+
+  .item_11 {
+    --width: 204px;
+    width: var(--width);
+    left: 12px;
+    top: 174px;
+    .code_editor {
+      left: var(--width);
+      margin-left: 20px;
+    }
+    img {
+      width: var(--width);
+      height: 360px;
+    }
+  }
+  .item_12 {
+    --width: 520px;
+    width: var(--wdith);
+    left: 244px;
+    top: 254px;
+    img {
+      width: var(--width);
+      height: 296px;
+    }
+    .code_editor {
+      left: var(--width);
+      margin-left: 20px;
+    }
+  }
+  .item_13 {
+    --width: 284px;
+    width: var(--width);
+    left: 552px;
+    top: 78px;
+    width: 284px;
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+    img {
+      width: var(--width);
+      height: 128px;
+    }
+  }
+  .item_14 {
+    --width: 356px;
+    width: var(--wdith);
+    left: 788px;
+    top: 254px;
+
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+    img {
+      width: var(--wdith);
+      height: 296px;
+    }
+  }
+  .item_15 {
+    --width: 166px;
+    width: var(--width);
+    left: 978px;
+  top: 22px;
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+    img {
+      width: var(--width);
+      height: 36px;
+    }
+  }
+
+
+  .item_16 {
+    --width: 392px;
+    width: 200px;
+    left: 264px;
+    top: 16px;
+    .code_editor {
+      left: var(--width);
+      margin-left: 20px;
+    }
+    img {
+      width: var(--width);
+      height: 704px;
+    }
+  }
+  .item_17 {
+    --width: 496px;
+    width: var(--wdith);
+    left: 656px;
+    top: 16px;
+    img {
+      width: var(--width);
+      height: 55px;
+    }
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+  }
+  .item_18 {
+    --width: 496px;
+    width: var(--width);
+    left: 656px;
+    top: 71px;
+    .code_editor {
+      right: var(--width);
+      margin-right: 20px;
+      transform-origin: top right;
+    }
+    img {
+      width: var(--width);
+      height: 649px;
+    }
+  }
+}

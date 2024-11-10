@@ -1,5 +1,7 @@
 import React from "react";
 import style from "./style.module.scss";
+import { CodeBlock, DotWave } from "@/components";
+import { FaChevronRight } from "react-icons/fa";
 
 interface IPillPositions {
   left: number;
@@ -80,3 +82,46 @@ const Tab = ({
 const Pill = ({ position }: { position: IPillPositions }) => {
   return <div className={style.pill} style={position} />;
 };
+
+function TabBody({ item }: { item: ITabBody }) {
+  const [isHover, setIsHover] = React.useState<boolean>(false);
+
+  return (
+    <div className={style.box}>
+      <img src={item.src} alt={item.name} className={style.banner} />
+      <div
+        className={style.blur}
+        style={{ display: isHover ? "block" : "none" }}
+      />
+      {item?.items?.map((item) => {
+        return (
+          <div
+            key={item.id}
+            className={`${style[`item_${item.id}`]} ${style.item}`}
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+          >
+            <img src={item.src} />
+            <DotWave
+              classNames={style.dot}
+              styles={{ display: isHover ? "none" : "block" }}
+            />
+            <div className={style.code_editor}>
+              <CodeBlock>{item.code}</CodeBlock>
+            </div>
+          </div>
+        );
+      })}
+      <button className={style.demo_btn}>
+        <a href={item.href} target="_blank">
+          <p>{item.btnName}</p>
+          <div className={style.indicator}>
+            <FaChevronRight size={10} />
+          </div>
+        </a>
+      </button>
+    </div>
+  );
+}
+
+export { TabBody };
