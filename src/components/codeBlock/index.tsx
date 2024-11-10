@@ -1,7 +1,12 @@
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import {
+  Prism as SyntaxHighlighter,
+  SyntaxHighlighterProps,
+} from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-function CodeBlock({ children }: { children: string | string[] }) {
+interface IProps extends SyntaxHighlighterProps {}
+
+function CodeBlock({ children, ...rest }: IProps) {
   return (
     <SyntaxHighlighter
       language={"typescript"}
@@ -12,6 +17,7 @@ function CodeBlock({ children }: { children: string | string[] }) {
         borderRadius: "1rem",
         background: "transparent",
       }}
+      {...rest}
     >
       {children}
     </SyntaxHighlighter>

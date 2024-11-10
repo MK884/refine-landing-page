@@ -11,15 +11,18 @@ import Oracle from "@/assets/oracle.svg?react";
 import Salesforce from "@/assets/salesforce.svg?react";
 import Upwork from "@/assets/upwork.svg?react";
 import { IconType } from "react-icons";
-import { CgShoppingBag } from "react-icons/cg";
+import { CgMenuLeft, CgShoppingBag } from "react-icons/cg";
 import { CiGlobe, CiTrophy } from "react-icons/ci";
+import { FaShieldAlt } from "react-icons/fa";
 import { FaGlasses } from "react-icons/fa6";
 import { FiEdit3 } from "react-icons/fi";
+import { GrMagic } from "react-icons/gr";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { PiCalendarDotsBold } from "react-icons/pi";
-import { SiRefine } from "react-icons/si";
-import { TbBrandTelegram, TbDeviceTv, TbPuzzle } from "react-icons/tb";
+import { SiGoogleforms, SiRefine } from "react-icons/si";
+import { TbBrandTelegram, TbDeviceTv, TbPuzzle, TbTableFilled } from "react-icons/tb";
 import { TfiComments } from "react-icons/tfi";
+import { TiChartBar } from "react-icons/ti";
 
 export interface INav {
   title: string;
@@ -546,5 +549,103 @@ export const companies: Array<IIcons> = [
   {
     id: 12,
     icon: <Upwork />,
+  },
+];
+
+interface IButtons {
+  name: string;
+  Icon: IconType;
+  activeColor: string;
+  content: React.ReactElement;
+  lightSrc: string;
+  darkSrc: string;
+  lightCode: string;
+  darkCode: string;
+}
+
+export const features: Array<IButtons> = [
+  {
+    activeColor: "red",
+    content: <>tables</>,
+    Icon: TbTableFilled,
+    name: "tables",
+    darkSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/datatables-ui-dark.png",
+    lightSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/datatables-ui-light.png",
+    lightCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/datatables-code.png",
+    darkCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/datatables-code-dark.png",
+  },
+  {
+    activeColor: "orange",
+    content: <>lists</>,
+    Icon: CgMenuLeft,
+    name: "lists",
+    darkSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/list-ui-dark.png",
+    lightSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/list-ui-light.png",
+    lightCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/list-code.png",
+    darkCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/list-code-dark.png",
+  },
+  {
+    activeColor: "yellow",
+    content: <>charts</>,
+    Icon: TiChartBar,
+    name: "charts",
+    darkSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/charts-ui-dark.png",
+    lightSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/charts-ui-light.png",
+    lightCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/charts-code.png",
+    darkCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/charts-code-dark.png",
+  },
+  {
+    activeColor: "cyan",
+    content: <>form</>,
+    Icon: SiGoogleforms,
+    name: "form",
+    darkSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/forms-ui-dark.png",
+    lightSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/forms-ui-light.png",
+    lightCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/forms-code.png",
+    darkCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/forms-code-dark.png",
+  },
+  {
+    activeColor: "blue",
+    content: <>wizard</>,
+    Icon: GrMagic,
+    name: "wizard",
+    darkSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/wizards-ui-dark.png",
+    lightSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/wizards-ui-light.png",
+    lightCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/wizards-code.png",
+    darkCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/wizards-code-dark.png",
+  },
+  {
+    activeColor: "purple",
+    content: <>authentication</>,
+    Icon: FaShieldAlt,
+    name: "authentication",
+    darkSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/authentication-ui.png",
+    lightSrc:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/authentication-ui-light.png",
+    lightCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/authentication-code.png",
+    darkCode:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/authentication-code-dark.png",
   },
 ];

@@ -9,7 +9,7 @@
 }
 
 .conatiner {
-  margin-top: 2.5rem;
+  margin-top: -2.5rem;
   width: 100%;
   padding: 2.5rem;
   border-radius: 1.5rem;
@@ -53,8 +53,9 @@
 @keyframes svg {
   0% {
     stroke-dashoffset: 150;
+    fill: transparent;
   }
-  70%{
+  90% {
     fill: transparent;
   }
   100% {

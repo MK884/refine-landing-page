@@ -1,0 +1,169 @@
+@use "../../styles/colors";
+
+.container {
+  .box {
+    width: 100%;
+    padding-inline: 2.5rem;
+    h2 {
+      font-size: 32px;
+      color: var(--text-default);
+      font-weight: 500;
+      span {
+        font-weight: 600;
+        color: var(--brand-primary);
+      }
+    }
+    p {
+      max-width: 28rem;
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: var(--text-placeholder);
+    }
+  }
+  .box_2 {
+    margin-top: 5rem;
+    .container {
+      padding-top: 5rem;
+      padding-left: 2.5rem;
+      height: 688px;
+      background-color: var(--background-surface-layer-01);
+      border-radius: 1.5rem;
+      isolation: isolate;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+
+      .info {
+        max-width: 416px;
+        margin-top: 4rem;
+        h3 {
+          line-height: 1.75rem;
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: var(--text-medium);
+        }
+        p {
+          margin-top: 1.5rem;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          color: var(--text-placeholder);
+        }
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          row-gap: 1rem;
+          column-gap: 0.5rem;
+          margin-top: 2.5rem;
+          width: max-content;
+          .btn {
+            all: unset;
+            background-color: var(--page-default);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: flex-start;
+            z-index: 1;
+            cursor: pointer;
+            color: var(--text-placeholder);
+            .red {
+              color: red;
+            }
+            .orange {
+              color: #f98c1f;
+            }
+            .yellow {
+              color: #f9d51f;
+            }
+            .cyan {
+              color: #47d1bf;
+            }
+            .blue {
+              color: #3db8f5;
+            }
+            .purple {
+              color: #5959ff;
+            }
+            .title {
+              font-size: 1rem;
+              line-height: 1.5rem;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      .content {
+        flex: 1;
+        background-color: transparent;
+        .image {
+          height: 464px;
+          width: 100%;
+          position: relative;
+          transform: translateX(150px);
+          img {
+            transition: translate 1s;
+            position: absolute;
+            width: auto;
+            height: 100%;
+            object-position: top left;
+          }
+        }
+        .code {
+          width: 488px;
+          translate: 50px -50px;
+          img {
+            background-color: var(--page-default);
+            position: absolute;
+            height: auto;
+            max-width: 100%;
+            border-radius: 0.75rem;
+            box-shadow: 2px 8px 50px  rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            transition: .5s ease-out;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+.linear_gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  --red: #301d2f;
+  --orange: #34292c;
+  --yellow: #34322d;
+  --cyan: #243343;
+  --blue: #202d41;
+  --purple: #222341;
+  &:is([data-theme="light"] *) {
+    --red: #efdde0;
+    --orange: #f5ecde;
+    --yellow: #f4e4df;
+    --cyan: #d6e9ec;
+    --blue: #d8e8f7;
+    --purple: #e1def4;
+  }
+  &.red {
+    background-image: linear-gradient(65deg, transparent 65%, var(--red));
+  }
+  &.orange {
+    background-image: linear-gradient(65deg, transparent 65%, var(--orange));
+  }
+  &.yellow {
+    background-image: linear-gradient(65deg, transparent 65%, var(--yellow));
+  }
+  &.cyan {
+    background-image: linear-gradient(65deg, transparent 65%, var(--cyan));
+  }
+  &.blue {
+    background-image: linear-gradient(65deg, transparent 65%, var(--blue));
+  }
+  &.purple {
+    background-image: linear-gradient(65deg, transparent 65%, var(--purple));
+  }
+}

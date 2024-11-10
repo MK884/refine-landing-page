@@ -1,3 +1,4 @@
+import Features from "./features";
 import HeroSection from "./hero";
 
-export { HeroSection };
+export { HeroSection, Features };
