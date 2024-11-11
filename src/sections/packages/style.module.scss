@@ -71,6 +71,42 @@
             }
           }
         }
+        .packages {
+          padding-top: 2.5rem;
+          width: 100%;
+          position: relative;
+          &::after,
+          &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            z-index: 2;
+            width: 10%;
+            top: 0;
+          }
+          &::before {
+            right: 0;
+            background-image: linear-gradient(
+              to left,
+              var(--background-surface-layer-01) 40%,
+              rgba(255, 255, 255, 0)
+            );
+          }
+          &::after {
+            left: 0;
+            background-image: linear-gradient(
+              to right,
+              var(--background-surface-layer-01) 40%,
+              rgba(255, 255, 255, 0)
+            );
+          }
+          .slide {
+            display: flex;
+            padding-top: 1.5rem;
+            align-items: center;
+            justify-content: center;
+          }
+        }
       }
     }
   }
@@ -91,4 +127,86 @@
     #47ebeb26 0,
     transparent 100%
   );
+}
+
+.card {
+  padding: 1rem;
+  padding-right: 1.5rem;
+  background-color: var(--page-default);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+  .name {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    white-space: nowrap;
+    color: var(--text-medium);
+  }
+  &:hover {
+    .indicator {
+      transform: scale(1);
+    }
+  }
+  .indicator {
+    transform-origin: top center;
+    position: absolute;
+    top: -48px;
+    right: 50%;
+    translate: 50%;
+    transform: scale(0);
+    background-color: var(--text-default);
+    transition: 0.15s;
+    border-radius: 999px;
+    .command {
+      padding: 0.75rem 1.5rem;
+      color: var(--text-inverse);
+      white-space: nowrap;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      position: relative;
+      z-index: 20;
+      &::after {
+        position: absolute;
+        content: "\26CA";
+        left: 50%;
+        bottom: -0.5rem;
+        transform: translateX(-50%);
+        color: var(--text-default);
+      }
+    }
+  }
+}
+
+.carousel {
+  background-color: transparent;
+  width: 100%;
+  padding: 0 4rem;
+  display: flex;
+  isolation: isolate;
+  position: relative;
+  gap: 1rem;
+  &:hover {
+    .slider {
+      animation-play-state: paused;
+    }
+  }
+  .slider {
+    display: flex;
+    gap: 1rem;
+    animation: 50s slider infinite linear;
+  }
+}
+
+@keyframes slider {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

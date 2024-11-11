@@ -4,6 +4,35 @@ import Autodesk from "@/assets/autodesk.svg?react";
 import Cisco from "@/assets/cisco.svg?react";
 import Deloitte from "@/assets/deloitte.svg?react";
 import Ibm from "@/assets/ibm.svg?react";
+import Ably from "@/assets/icons/ably.svg?react";
+import Airtable from "@/assets/icons/airtable.svg?react";
+import AntDesign from "@/assets/icons/ant_design.svg?react";
+import Appwrite from "@/assets/icons/appwrite.svg?react";
+import ChakraUI from "@/assets/icons/chakra_ui.svg?react";
+import Directus from "@/assets/icons/directus.svg?react";
+import Elide from "@/assets/icons/elide.svg?react";
+import ElideGraphql from "@/assets/icons/elide_graphql.svg?react";
+import Firebase from "@/assets/icons/firebase.svg?react";
+import GraphQL from "@/assets/icons/graphql.svg?react";
+import Hasura from "@/assets/icons/hasura.svg?react";
+import HeadlessUI from "@/assets/icons/headless_ui.svg?react";
+import HookForm from "@/assets/icons/hook_form.svg?react";
+import HyGraph from "@/assets/icons/hygraph.svg?react";
+import JsonAPi from "@/assets/icons/json_api.svg?react";
+import Kbar from "@/assets/icons/kbar.svg?react";
+import Mantine from "@/assets/icons/mantine.svg?react";
+import MaterialUI from "@/assets/icons/material_ui.svg?react";
+import Medusa from "@/assets/icons/medusa.svg?react";
+import NextJS from "@/assets/icons/nextjs.svg?react";
+import NextJSCRUD from "@/assets/icons/nextjs_crud.svg?react";
+import NextJSQuery from "@/assets/icons/nextjs_query.svg?react";
+import Remix from "@/assets/icons/remix.svg?react";
+import Sanity from "@/assets/icons/sanity.svg?react";
+import ShadcnUI from "@/assets/icons/shadcn_ui.svg?react";
+import SQLite from "@/assets/icons/sql_lite.svg?react";
+import Strapi from "@/assets/icons/strapi.svg?react";
+import Supabase from "@/assets/icons/supabase.svg?react";
+import TailwindCSS from "@/assets/icons/tailwind.svg?react";
 import Intel from "@/assets/intel.svg?react";
 import Jp from "@/assets/jp-morgan.svg?react";
 import Meta from "@/assets/meta.svg?react";
@@ -20,7 +49,12 @@ import { GrMagic } from "react-icons/gr";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { PiCalendarDotsBold } from "react-icons/pi";
 import { SiGoogleforms, SiRefine } from "react-icons/si";
-import { TbBrandTelegram, TbDeviceTv, TbPuzzle, TbTableFilled } from "react-icons/tb";
+import {
+  TbBrandTelegram,
+  TbDeviceTv,
+  TbPuzzle,
+  TbTableFilled,
+} from "react-icons/tb";
 import { TfiComments } from "react-icons/tfi";
 import { TiChartBar } from "react-icons/ti";
 
@@ -34,6 +68,17 @@ export interface ISubNav {
   title: string;
   caption?: string;
   icon: IMenuIcon;
+}
+
+interface IButtons {
+  name: string;
+  Icon: IconType;
+  activeColor: string;
+  content: React.ReactElement;
+  lightSrc: string;
+  darkSrc: string;
+  lightCode: string;
+  darkCode: string;
 }
 
 interface IMenuIcon {
@@ -552,17 +597,6 @@ export const companies: Array<IIcons> = [
   },
 ];
 
-interface IButtons {
-  name: string;
-  Icon: IconType;
-  activeColor: string;
-  content: React.ReactElement;
-  lightSrc: string;
-  darkSrc: string;
-  lightCode: string;
-  darkCode: string;
-}
-
 export const features: Array<IButtons> = [
   {
     activeColor: "red",
@@ -647,5 +681,156 @@ export const features: Array<IButtons> = [
       "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/authentication-code.png",
     darkCode:
       "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/sweet-spot/authentication-code-dark.png",
+  },
+];
+
+export const UIPackages: Array<IPackage> = [
+  {
+    Icon: <Firebase />,
+    name: "Firebase",
+    npmCommand: "npm i refine-firebase",
+  },
+  {
+    Icon: <Ably />,
+    name: "Ably",
+    npmCommand: "npm i @refinedev/ably",
+  },
+  {
+    Icon: <Airtable />,
+    name: "Airtable",
+    npmCommand: "npm i @refinedev/airtable",
+  },
+  {
+    Icon: <Appwrite />,
+    name: "Appwrite",
+    npmCommand: "npm i @refinedev/appwrite",
+  },
+  {
+    Icon: <Directus />,
+    name: "Directus",
+    npmCommand: "npm i @tspvivek/refine-directus",
+  },
+  {
+    Icon: <Elide />,
+    name: "Elide",
+    npmCommand: "npm i elide-simple-rest",
+  },
+  {
+    Icon: <ElideGraphql />,
+    name: "Elide GraphQL",
+    npmCommand: "npm i elide-simple-graphql",
+  },
+  {
+    Icon: <Hasura />,
+    name: "Hasura",
+    npmCommand: "npm i @refinedev/hasura",
+  },
+  {
+    Icon: <HookForm />,
+    name: "Hook Form",
+    npmCommand: "npm i @refinedev/react-hook-form",
+  },
+  {
+    Icon: <AntDesign />,
+    name: "Ant Design",
+    npmCommand: "npm i @refinedev/antd",
+  },
+  {
+    Icon: <MaterialUI />,
+    name: "Material UI",
+    npmCommand: "npm i @refinedev/mui",
+  },
+  {
+    Icon: <Mantine />,
+    name: "Mantine",
+    npmCommand: "npm i @refinedev/mantine",
+  },
+  {
+    Icon: <ChakraUI />,
+    name: "Chakra UI",
+    npmCommand: "npm i @refinedev/chakra-ui",
+  },
+  {
+    Icon: <ShadcnUI />,
+    name: "Shadcn/ui",
+    npmCommand: "npx shadcn-ui init",
+  },
+  {
+    Icon: <TailwindCSS />,
+    name: "Tailwind CSS",
+    npmCommand: "npx tailwindcss init",
+  },
+  {
+    Icon: <HeadlessUI />,
+    name: "Headless UI",
+    npmCommand: "npm i @headlessui/react",
+  },
+];
+
+export const packages: Array<IPackage> = [
+  {
+    Icon: <GraphQL />,
+    name: "GraphQL",
+    npmCommand: "npm i @refinedev/graphql",
+  },
+  {
+    Icon: <Kbar />,
+    name: "Kbar",
+    npmCommand: "npm i @refinedev/kbar",
+  },
+  {
+    Icon: <Medusa />,
+    name: "Medusa",
+    npmCommand: "npm i @refinedev/medusa",
+  },
+  {
+    Icon: <NextJSCRUD />,
+    name: "NextJS CRUD",
+    npmCommand: "npm i @refinedev/nestjsx-crud",
+  },
+  {
+    Icon: <NextJSQuery />,
+    name: "NextJS-query",
+    npmCommand: "npm i @refinedev/nestjs-query",
+  },
+  {
+    Icon: <NextJS />,
+    name: "NextJS",
+    npmCommand: "npm i @refinedev/nextjs-router",
+  },
+  {
+    Icon: <Remix />,
+    name: "Remix",
+    npmCommand: "npm i @refinedev/remix-router",
+  },
+  {
+    Icon: <Strapi />,
+    name: "Strapi",
+    npmCommand: "npm i @refinedev/strapi-v4",
+  },
+  {
+    Icon: <Supabase />,
+    name: "Supabase",
+    npmCommand: "npm i @refinedev/supabase",
+  },
+  {
+    Icon: <HyGraph />,
+    name: "Hygraph",
+    npmCommand: "npm i @acomagu/refine-hygraph",
+  },
+  {
+    Icon: <Sanity />,
+    name: "Sanity",
+    npmCommand: "npm i refine-sanity",
+  },
+  {
+    Icon: <SQLite />,
+    name: "SQLite",
+    npmCommand: "npm i refine-sqlite",
+  },
+  {
+    Icon: <JsonAPi />,
+    name: "JSON:API",
+    npmCommand: "npm i refine-jsonapi",
   },
 ];

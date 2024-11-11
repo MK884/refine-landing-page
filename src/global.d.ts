@@ -23,3 +23,9 @@ interface IIcons {
   id: number;
   icon?: React.ReactElement;
 }
+
+interface IPackage {
+  Icon: React.ReactElement;
+  npmCommand: string;
+  name: string;
+}
