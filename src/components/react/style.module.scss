@@ -1,0 +1,64 @@
+@use "../../styles/colors";
+
+.box {
+  max-width: fit-content;
+  position: relative;
+  background-color: transparent;
+  height: 3rem;
+  aspect-ratio: 1;
+  span {
+    height: 18%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background-color: var(--brand-primary);
+  }
+  div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 100%;
+    border-bottom: 4px solid linear;
+    border-left: 4px solid var(--brand-primary);
+    border-right: 1px solid var(--brand-primary);
+    border-top: 4px solid var(--brand-primary);
+    &:nth-child(1) {
+      animation: 2s spin-1 linear infinite;
+    }
+    &:nth-child(2) {
+      animation: 2s spin-2 linear infinite;
+    }
+    &:nth-child(3) {
+      animation: 2s spin-3 linear infinite;
+    }
+  }
+}
+
+@keyframes spin-1 {
+  from {
+    transform: rotateZ(120deg) rotateX(66deg) rotateZ(0);
+  }
+  to {
+    transform: rotateZ(120deg) rotateX(66deg) rotateZ(360deg);
+  }
+}
+@keyframes spin-2 {
+  from {
+    transform: rotateZ(240deg) rotateX(66deg) rotateZ(0);
+  }
+  to {
+    transform: rotateZ(240deg) rotateX(66deg) rotateZ(360deg);
+  }
+}
+@keyframes spin-3 {
+  from {
+    transform: rotateZ(360deg) rotateX(66deg) rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg) rotateX(66deg) rotateZ(360deg);
+  }
+}

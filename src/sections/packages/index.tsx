@@ -29,7 +29,7 @@ function Packages() {
               <div className={style.slide}>
                 <Carousel direction="rtl">
                   <>
-                    {UIPackages?.map((item, idx) => (
+                    {packages?.map((item, idx) => (
                       <PackageCard {...item} key={idx} />
                     ))}
                   </>
@@ -67,7 +67,7 @@ export default Packages;
 export const PackageCard = ({ Icon, name, npmCommand }: IPackage) => {
   return (
     <div className={style.card}>
-      <div className={style.icon}>{Icon}</div>
+      <div>{Icon}</div>
       <div className={style.name}>{name}</div>
       <div className={style.indicator}>
         <div className={style.command}>{npmCommand}</div>

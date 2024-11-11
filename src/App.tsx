@@ -1,6 +1,7 @@
 import "@/styles/app.scss";
 import { Header } from "@/layout";
 import { Features, HeroSection, Packages } from "@/sections";
+import { ReactLogo } from "./components";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <HeroSection />
           <Features />
           <Packages />
+          <ReactLogo />
         </div>
       </div>
     </>
