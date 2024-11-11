@@ -1,6 +1,6 @@
 import "@/styles/app.scss";
 import { Header } from "@/layout";
-import { Features, HeroSection } from "@/sections";
+import { Features, HeroSection, Packages } from "@/sections";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <div className="container_box">
           <HeroSection />
           <Features />
+          <Packages />
         </div>
       </div>
     </>

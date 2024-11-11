@@ -1,3 +1,4 @@
+import Button, { NpmButton } from "./button";
 import CodeBlock from "./codeBlock";
 import CompanyTestimonial from "./company";
 import DotWave from "./dot";
@@ -15,4 +16,6 @@ export {
   CodeBlock,
   TabBody,
   CompanyTestimonial,
+  Button,
+  NpmButton,
 };

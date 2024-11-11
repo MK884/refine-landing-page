@@ -1,0 +1,94 @@
+@use "../../styles/colors";
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  .container {
+    .box {
+      width: 100%;
+      padding-inline: 2.5rem;
+      h2 {
+        font-size: 32px;
+        color: var(--text-default);
+        font-weight: 500;
+        span {
+          font-weight: 600;
+          color: var(--brand-primary);
+        }
+        span:last-child {
+          color: red;
+        }
+        span:nth-child(1) {
+          color: #26d97f;
+        }
+        &:is([data-theme="light"] *) {
+          span:last-child {
+            color: #8000ff;
+          }
+          span:nth-child(1) {
+            color: var(--brand-primary);
+          }
+          span:nth-child(2) {
+            color: #3333ff;
+          }
+        }
+      }
+    }
+    .box_2 {
+      margin-top: 5rem;
+      padding-bottom: 2.5rem;
+      .container {
+        padding-bottom: 2.5rem;
+        background-color: var(--background-surface-layer-01);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        position: relative;
+        isolation: isolate;
+        .info {
+          margin-top: 2.5rem;
+          padding-inline: 2.5rem;
+          .title {
+            width: 100%;
+            h4 {
+              color: var(--text-medium);
+              font-size: 1.5rem;
+              line-height: 2rem;
+              font-weight: 600;
+            }
+          }
+          .action {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: end;
+            h6 {
+              font-size: 1rem;
+              line-height: 1.5rem;
+              font-weight: 500;
+              color: var(--text-placeholder);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.linear_gradient:is([data-theme="light"] *) {
+  background-image: radial-gradient(
+    50% 100% at 50% -60%,
+    #0080ff26 0,
+    transparent 100%
+  );
+}
+.linear_gradient {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(
+    50% 100% at 50% -40%,
+    #47ebeb26 0,
+    transparent 100%
+  );
+}

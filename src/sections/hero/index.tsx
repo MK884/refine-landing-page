@@ -1,10 +1,14 @@
-import React from "react";
-import style from "./style.module.scss";
-import { FaStar } from "react-icons/fa6";
+import {
+  Button,
+  CompanyTestimonial,
+  NpmButton,
+  TabBody,
+  TabSlider,
+} from "@/components";
+import { tabsData } from "@/constants";
 import { CiPlay1 } from "react-icons/ci";
-import { MdDone } from "react-icons/md";
-import { TabSlider, TabBody, CompanyTestimonial } from "@/components";
-import { npm_command, tabsData } from "@/constants";
+import { FaStar } from "react-icons/fa6";
+import style from "./style.module.scss";
 
 const tabs: Array<ITabs> = [
   {
@@ -26,14 +30,6 @@ const tabs: Array<ITabs> = [
 ];
 
 function HeroSection() {
-  const [isClicked, setIsClicked] = React.useState<boolean>(false);
-
-  const handleClickNpm = () => {
-    setIsClicked(true);
-    navigator.clipboard.writeText(npm_command);
-    setTimeout(() => setIsClicked(false), 5000);
-  };
-
   return (
     <section className={style.section}>
       <div className={style.info}>
@@ -54,28 +50,13 @@ function HeroSection() {
           </p>
         </div>
         <div className={style.actions}>
-          <button className={style.doc_btn}>
-            <CiPlay1 size={22} />
-            see docs
-          </button>
-          <button className={style.npm_btn} onClick={handleClickNpm}>
-            <span data-text={npm_command} className={style.npm}>
-              {npm_command}
-              {isClicked && (
-                <>
-                  <span className={style.copy} data-text="copied to clipboard!">
-                    copied to clipboard!
-                  </span>
-                </>
-              )}
-            </span>
-            <div className={style.bg} />
-            {isClicked && (
-              <div className={style.icon}>
-                <MdDone size={14} />
-              </div>
-            )}
-          </button>
+          <Button
+            text="See Docs"
+            Icon={CiPlay1}
+            onClick={() => window.open("https://refine.dev/docs/", "_blank")}
+            IconSize={22}
+          />
+          <NpmButton />
         </div>
       </div>
       <TabSlider data={tabs} />

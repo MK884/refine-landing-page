@@ -6,7 +6,7 @@ import { useTheme } from "@/context";
 
 function Features() {
   const { theme } = useTheme();
-  const INTERVAL_TIME = 1500;
+  const INTERVAL_TIME = 3000;
   const [activeIndex, setActiveIndex] = React.useState<number>(0);
   const [isClicked, setIsClicked] = React.useState<boolean>(false);
 
