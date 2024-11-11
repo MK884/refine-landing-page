@@ -6,14 +6,32 @@ import { useTheme } from "@/context";
 
 function Features() {
   const { theme } = useTheme();
-
+  const INTERVAL_TIME = 1500;
   const [activeIndex, setActiveIndex] = React.useState<number>(0);
+  const [isClicked, setIsClicked] = React.useState<boolean>(false);
 
   const handleClicks = (index: number) => {
-    if (index < 0 || index > features.length) return;
+    if (index < 0 || index > features.length) {
+      setActiveIndex(0);
+      return;
+    }
+    setIsClicked(true);
 
     setActiveIndex(index);
   };
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      setActiveIndex((prev) => {
+        if (prev >= features.length - 1) return 0;
+        return prev + 1;
+      });
+    }, INTERVAL_TIME);
+
+    if (isClicked) clearInterval(intervalId);
+
+    return () => clearInterval(intervalId);
+  }, [isClicked]);
 
   return (
     <section className={style.section}>
