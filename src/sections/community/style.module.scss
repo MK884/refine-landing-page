@@ -1,0 +1,89 @@
+@use "../../styles/colors";
+.section {
+  .box {
+    width: 100%;
+    padding-inline: 2.5rem;
+    h2 {
+      font-size: 32px;
+      color: var(--text-default);
+      font-weight: 500;
+      span {
+        font-weight: 600;
+        color: var(--brand-primary);
+      }
+    }
+  }
+  .box_2 {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .container {
+      width: 100%;
+      max-width: 486px;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      background-color: var(--background-surface-layer-01);
+      padding: 1rem;
+      .text {
+        padding-inline: 1.5rem;
+        margin-top: 1.5rem;
+        p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          color: var(--text-placeholder);
+          span {
+            color: var(--text-default);
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 9/5.4;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+.card {
+  background-color: var(--background-surface-layer-01);
+  text-decoration: none;
+  border-radius: 1.5rem;
+  padding: 1rem 2.5rem;
+  .title {
+    white-space: nowrap;
+    line-height: 72px;
+    font-size: 64px;
+    font-weight: 700;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(
+      to top,
+      var(--page-default) 5%,
+      var(--text-default),
+      var(--text-default)
+    );
+    &:is([data-theme="light"] *) {
+      color: var(--text-medium);
+    }
+  }
+  .caption {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--text-placeholder);
+  }
+}
+
+.card:is(href) {
+  cursor: pointer;
+}

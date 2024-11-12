@@ -3,9 +3,11 @@ import { packages, UIPackages } from "@/constants";
 import { useTheme } from "@/context";
 import React from "react";
 import { CiCircleChevRight } from "react-icons/ci";
-import { a11yDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  a11yDark,
+  oneLight,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 import style from "./style.module.scss";
-
 
 const codes = `import { useGetIdentity, useList } from "@refinedev/core";
     
@@ -32,14 +34,11 @@ const codes = `import { useGetIdentity, useList } from "@refinedev/core";
         },
       ],
     });
-    const totalSickLeave = data?.total;
-    
-    `;
+    const totalSickLeave = data?.total;`;
 
 function Packages() {
-
-  const {theme} =useTheme();
-  const isDark = theme ==='dark';
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
 
   return (
     <section className={style.section}>
@@ -124,10 +123,19 @@ function Packages() {
             </div>
             <div className={style.code_editor}>
               <div className={style.code}>
-                <CodeBlock showLineNumbers={true} style={isDark ? a11yDark :oneLight}>{codes}</CodeBlock>
-                <CodeBlock showLineNumbers={true} style={isDark ? a11yDark :oneLight}>{codes}</CodeBlock>
+                <CodeBlock
+                  showLineNumbers={true}
+                  style={isDark ? a11yDark : oneLight}
+                >
+                  {codes}
+                </CodeBlock>
+                <CodeBlock
+                  showLineNumbers={true}
+                  style={isDark ? a11yDark : oneLight}
+                >
+                  {codes}
+                </CodeBlock>
               </div>
-              
             </div>
           </div>
           <div className={style.details}>

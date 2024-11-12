@@ -1,5 +1,5 @@
 import { Header } from "@/layout";
-import { Features, HeroSection, Packages } from "@/sections";
+import { Community, Features, HeroSection, Packages } from "@/sections";
 import "@/styles/app.scss";
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
           <HeroSection />
           <Features />
           <Packages />
+          <Community />
         </div>
       </div>
     </>

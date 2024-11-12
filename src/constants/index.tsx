@@ -450,8 +450,7 @@ export const tabsData: Array<ITabBody> = [
         },
       ],
     });
-    const totalSickLeave = data?.total;
-    `,
+    const totalSickLeave = data?.total;`,
       },
       {
         id: 14,
