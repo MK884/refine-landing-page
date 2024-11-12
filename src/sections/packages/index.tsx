@@ -1,9 +1,46 @@
-import React from "react";
-import style from "./style.module.scss";
-import { Button } from "@/components";
-import { CiCircleChevRight } from "react-icons/ci";
+import { Button, CodeBlock, ReactLogo } from "@/components";
 import { packages, UIPackages } from "@/constants";
+import { useTheme } from "@/context";
+import React from "react";
+import { CiCircleChevRight } from "react-icons/ci";
+import { a11yDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import style from "./style.module.scss";
+
+
+const codes = `import { useGetIdentity, useList } from "@refinedev/core";
+    
+    const { data: { employeeId } } = useGetIdentity();
+    
+    const { data } = useList({
+      resource: "time-offs", 
+      pagination: { current: 1, pageSize: 1 },
+      filters: [
+        {
+          field: "employeeId",
+          operator: "eq",
+          value: employeeId,
+        },
+        {
+          field: "status",
+          operator: "eq",
+          value: "approved",
+        },
+        {
+          field: "type",
+          operator: "eq",
+          value: "sick-leave",
+        },
+      ],
+    });
+    const totalSickLeave = data?.total;
+    
+    `;
+
 function Packages() {
+
+  const {theme} =useTheme();
+  const isDark = theme ==='dark';
+
   return (
     <section className={style.section}>
       <div className={style.container}>
@@ -54,6 +91,58 @@ function Packages() {
                   variant="outline"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={style.container_2}>
+        <div className={style.box_1}>
+          <div className={style.thumbnail}>
+            <div className={style.bg_cover} />
+            <div className={style.items}></div>
+          </div>
+          <div className={style.details}>
+            <h6>Wheel? Already invented.</h6>
+            <div className={style.actions}>
+              <p>
+                Start with a well-structured boilerplate, built around the
+                industry’s best practices.
+              </p>
+              <Button
+                text="Learn more"
+                onClick={() => {}}
+                Icon={CiCircleChevRight}
+                variant="outline"
+              />
+            </div>
+          </div>
+        </div>
+        <div className={`${style.box_1} ${style.box_2}`}>
+          <div className={style.thumbnail}>
+            <div className={style.logo}>
+              <ReactLogo />
+            </div>
+            <div className={style.code_editor}>
+              <div className={style.code}>
+                <CodeBlock showLineNumbers={true} style={isDark ? a11yDark :oneLight}>{codes}</CodeBlock>
+                <CodeBlock showLineNumbers={true} style={isDark ? a11yDark :oneLight}>{codes}</CodeBlock>
+              </div>
+              
+            </div>
+          </div>
+          <div className={style.details}>
+            <h6>100% Pure React code</h6>
+            <div className={style.actions}>
+              <p>
+                Don’t get locked-in to proprietary, black-box solutions. With
+                Refine you have always 100% control over your project.
+              </p>
+              <Button
+                text="Refine on GitHub"
+                onClick={() => {}}
+                Icon={CiCircleChevRight}
+                variant="outline"
+              />
             </div>
           </div>
         </div>

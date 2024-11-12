@@ -1,9 +1,8 @@
-import React from 'react'
 import style from './style.module.scss';
 
-function ReactLogo() {
+function ReactLogo({size=3}:{size?:number}) {
   return (
-    <div className={style.box}>
+    <div className={style.box} style={{ height: `${size}rem`}}>
       <div />
       <div />
       <div />
