@@ -1,17 +1,48 @@
 @use "./colors";
+@use "./mixin" as *;
 
 .main {
   height: 100dvh;
   background: var(--page-default);
   overflow-x: hidden;
   color: var(--text-default);
-  .container_box{
+  .container_box {
     display: flex;
     flex-direction: column;
     margin-inline: auto;
-    max-width: 1200px;
     width: 100%;
+    max-width: 1200px;
     gap: 10rem;
     margin-bottom: 10rem;
+  }
+}
+
+// screens
+@include lg {
+  .main {
+    .container_box {
+      max-width: 896px;
+      gap: 7rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
+@include sm {
+  .main {
+    .container_box {
+      max-width: 656px;
+      gap: 5rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+@include xs {
+  .main {
+    .container_box {
+      max-width: 592px;
+      padding: 0 0.5rem;
+      margin-bottom: 3rem;
+      gap: 4rem;
+    }
   }
 }

@@ -1,4 +1,6 @@
 @use "../../styles/colors";
+@use "../../styles/mixin" as *;
+
 .section {
   margin-top: 5rem;
   display: flex;
@@ -69,7 +71,6 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1.5rem;
-    max-width: 60%;
     h1 {
       font-size: 56px;
       font-weight: 800;
@@ -79,7 +80,7 @@
       font-size: 1rem;
       font-weight: 400;
       color: var(--text-medium);
-      max-width: 60%;
+      max-width: 384px;
       line-height: 1.5rem;
     }
   }
@@ -98,5 +99,69 @@
   }
   to {
     transform: translateX(100px);
+  }
+}
+
+// screens
+@include xs {
+  .section {
+    margin-top: 0;
+    // gap: 3rem;
+    .info {
+      padding: 0;
+      gap: 1.5rem;
+    }
+    .head {
+      h1 {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+    .actions {
+      :nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}
+
+@include sm {
+  .section {
+    margin-top: 2rem;
+    // gap: 3rem;
+    .info {
+      padding: 0rem 0.5rem;
+    }
+    .head {
+      h1 {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+@include lg {
+  .section {
+    margin-top: 2rem;
+    // gap: 59px;
+    .info {
+      padding-block: 0;
+    }
+    .head {
+      h1 {
+        max-width: 688px;
+      }
+    }
+  }
+}
+
+@include xl {
+  .section {
+    .head {
+      h1 {
+        max-width: 688px;
+      }
+    }
   }
 }

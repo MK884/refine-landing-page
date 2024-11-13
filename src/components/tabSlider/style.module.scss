@@ -1,4 +1,5 @@
 @use "../../styles/colors";
+@use "../../styles/mixin" as *;
 
 .container {
   width: 100%;
@@ -15,9 +16,15 @@
     border-radius: 999px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.5rem;
     isolation: isolate;
-    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    scrollbar-width: 0;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
     .tab {
       all: unset;
       width: 100%;
@@ -34,6 +41,7 @@
         font-size: 0.875rem;
         line-height: 1.25rem;
         font-weight: 500;
+        white-space: nowrap;
       }
     }
     .pill {
@@ -43,27 +51,30 @@
       border-radius: 999px;
       height: 100%;
       transition: 0.3s;
-    //   width: calc(25% - 10px);
+      //   width: calc(25% - 10px);
     }
   }
   .body {
-    height: 736px;
     background-color: var(--page-default);
     overflow: hidden;
     border-radius: 18px;
   }
 }
 
+.object {
+  position: relative;
+  opacity: 1;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
 .box {
-  height: 100%;
+  height: auto;
   width: 100%;
   position: relative;
-  isolation: isolate;
-  .banner {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
   .demo_btn a {
     all: unset;
     position: absolute;
@@ -129,7 +140,7 @@
       position: absolute;
       top: 0px;
     }
-    img{
+    img {
       border-radius: 1rem;
     }
     &:hover {
@@ -355,7 +366,7 @@
     --width: 166px;
     width: var(--width);
     left: 978px;
-  top: 22px;
+    top: 22px;
     .code_editor {
       right: var(--width);
       margin-right: 20px;
@@ -366,7 +377,6 @@
       height: 36px;
     }
   }
-
 
   .item_16 {
     --width: 392px;
@@ -410,6 +420,64 @@
     img {
       width: var(--width);
       height: 649px;
+    }
+  }
+}
+
+// screens
+@include xs {
+  .container {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    .tabs {
+      scroll-snap-align: start;
+      .tab {
+        padding-block: 0.5rem;
+        span {
+          font-size: 0.75rem;
+          line-height: 1rem;
+        }
+      }
+    }
+    .object {
+      display: none;
+    }
+  }
+}
+
+@include sm {
+  .container {
+    .tabs {
+      width: auto;
+      scroll-snap-align: start;
+      .tab {
+        min-width: 200px;
+      }
+    }
+    .object {
+      display: none;
+    }
+  }
+}
+
+@include lg {
+  .container {
+    .tab {
+      min-width: 244px;
+    }
+    .demo_btn {
+      display: none;
+    }
+  }
+}
+
+@include xl {
+  .container {
+    .tab {
+      min-width: 244px;
+    }
+    .btn{
+      display: none;
     }
   }
 }
