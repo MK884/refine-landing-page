@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./syle.module.scss";
 import { Button, NpmButton } from "@/components";
 import { CiPlay1 } from "react-icons/ci";
