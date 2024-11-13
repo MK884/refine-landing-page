@@ -1,6 +1,5 @@
-import React from "react";
-import style from "./style.module.scss";
 import { useTheme } from "@/context";
+import style from "./style.module.scss";
 
 interface ICard {
   title: string;

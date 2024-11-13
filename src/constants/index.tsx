@@ -833,3 +833,95 @@ export const packages: Array<IPackage> = [
     npmCommand: "npm i refine-jsonapi",
   },
 ];
+
+
+export const reviews: Array<IReviews> = [
+  {
+    review: "I find CRUD boring, but Refine makes it fun for developers again!",
+    identity: "CEO - Resend",
+    name: "Zeno Rocha",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/zeno-rocha.png",
+    href: "https://twitter.com/zenorocha",
+  },
+  {
+    review:
+      "Refine perfectly aligns with the philosophy of React Hook Form, and they work seamlessly together.",
+    identity: "Author of React Hook Form",
+    name: "Beier Luo",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/beier-luo.png",
+    href: "https://twitter.com/HookForm",
+  },
+  {
+    review:
+      "Refine has codemod support for major version transitions, making it easy for users to integrate new versions into their existing codebases seamlessly.",
+    identity: "Sr. Software Engineer at Atlassian",
+    name: "Daniel Del Core",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/daniel-del-core.png",
+    href: "https://twitter.com/zenorocha",
+  },
+  {
+    review:
+      "Refine has one of the most convenient developer experiences (DX), giving me superpowers when it comes to developing modern web apps with security and flexibility in mind.",
+    identity: "Founder - Tremor",
+    name: "Christopher Kindl",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/christopher-kindl.png",
+    href: "https://twitter.com/kindlaar",
+  },
+  {
+    review:
+      "No enterprise or development team want to be confined by the limitation of a framework. Refine is one of those rare frameworks that strikes the balance perfectly right. Low code, easy to use but when needed fully customizable with a perfect escape hatch.",
+    href: "https://cerbos.dev/about",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/emre-baran.png",
+    name: "Christopher Kindl",
+    identity: "CEO - cerbos.dev",
+  },
+  {
+    review:
+      "In Refine's headless way, the flexibility of the UI is impressive. The implementation of NextUI in Refine demonstrates this.",
+    href: "https://twitter.com/jrgarciadev",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/junior-garcia.png",
+    name: "Junior Garcia",
+    identity: "Founder - Next UI",
+  },
+  {
+    review:
+      "Medusa and Refine is a match for all developers looking for a strong open-source foundation. Check out the Refine SWAG store for a great Medusa implementation!",
+    href: "https://medusajs.com/",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/nicklas-gellner.png",
+    name: "Nicklas Gellner",
+    identity: "CEO - Medusa",
+  },
+  {
+    review: "npm create refine-app@latest => Boom!",
+    href: "https://www.withcoherence.com",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/zachary-zaro.png",
+    name: "Zachary Zaro",
+    identity: "Founder - Cohorence",
+  },
+  {
+    review:
+      "Refine has truly transformed the app development process, making it incredibly efficient and hassle-free. With Refine, you can focus on your app's core features, not on the time-consuming tools setup, allowing you to do things that matter the most.",
+    href: "https://twitter.com/jsmasterypro/status/1721977998436675703?s=20",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/adrian-hajdin.png",
+    name: "Adrian Hajdin",
+    identity: "Founder - JS Mastery",
+  },
+  {
+    review:
+      "I really like how Refine gives the freedom to choose different stacks for back-end, front-end, and even UI libraries.",
+    href: "https://daisyui.com",
+    avatarUrl:
+      "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/testimonials/pouya-saadeghi.png",
+    name: "Pouya Saadeghi",
+    identity: "Daisy UI - Founder",
+  },
+];

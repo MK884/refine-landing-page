@@ -1,0 +1,104 @@
+@use "../../styles/colors";
+.section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  .box {
+    width: 100%;
+    padding-inline: 2.5rem;
+    h2 {
+      font-size: 32px;
+      color: var(--text-default);
+      font-weight: 500;
+      span {
+        font-weight: 600;
+        color: var(--brand-primary);
+      }
+    }
+  }
+  .box_2 {
+    margin-top: 5rem;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    padding-bottom: 4rem;
+    .action {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-image: linear-gradient(transparent, var(--page-default) 80%);
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 5rem;
+        z-index: 2;
+      }
+    }
+    .gallary {
+      columns: 3;
+      gap: 1.5rem;
+    }
+  }
+}
+
+.card {
+  background-color: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  .box {
+    height: 100%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-between;
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: var(--text-medium);
+    }
+    a {
+      text-decoration: none;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      .avatar {
+        height: 3rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+        .logo {
+          font-size: 2rem;
+          background-color: var(--background-surface-layer-02);
+          height: 100%;
+          max-width: 100%;
+          line-height: 2.5rem;
+          color: var(--text-default);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        p {
+          color: var(--text-placeholder);
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
+}

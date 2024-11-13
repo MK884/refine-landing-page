@@ -29,3 +29,11 @@ interface IPackage {
   npmCommand: string;
   name: string;
 }
+
+interface IReviews {
+  review: string;
+  href?: string;
+  avatarUrl?: string;
+  name: string;
+  identity: string;
+}
