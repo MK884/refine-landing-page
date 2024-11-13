@@ -355,6 +355,7 @@ header {
 .mob_nav {
   display: none;
   border-bottom: 1px solid var(--border-strong);
+  background-color: var(--page-default);
   .mob_nav_header {
     .nav_indi {
       display: flex;

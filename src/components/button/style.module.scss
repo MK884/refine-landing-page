@@ -16,6 +16,7 @@
   font-weight: 550;
   font-size: 1rem;
   position: relative;
+  width: fit-content;
   &.fill {
     background-color: var(--brand-primary);
     color: var(--text-inverse);
@@ -61,6 +62,7 @@
   padding-block: 0.75rem;
   position: relative;
   cursor: pointer;
+  width: fit-content;
   padding-inline: 1.5rem;
   background-color: var(--brand-primary-bg);
   span {
@@ -136,7 +138,6 @@
     }
   }
 }
-
 
 // animations
 @keyframes text-reveal {
