@@ -1,4 +1,4 @@
-import { Header } from "@/layout";
+import { Footer, Header } from "@/layout";
 import { Community, Features, HeroSection, Packages, Reviews } from "@/sections";
 import "@/styles/app.scss";
 
@@ -14,6 +14,7 @@ function App() {
           <Community />
           <Reviews />
         </div>
+        <Footer />
       </div>
     </>
   );

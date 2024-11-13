@@ -3,6 +3,7 @@ import CodeBlock from "./codeBlock";
 import CompanyTestimonial from "./company";
 import DotWave from "./dot";
 import Github from "./Github";
+import ProductHunt from "./ProductHunt";
 import ReactLogo from "./react";
 import Refine from "./Refine";
 import TabSlider, { TabBody } from "./tabSlider";
@@ -20,4 +21,5 @@ export {
   Button,
   NpmButton,
   ReactLogo,
+  ProductHunt,
 };

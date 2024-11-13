@@ -1,3 +1,4 @@
-import Header from "./header";
+import Footer from "./footer";
+import Header, { NewBtn } from "./header";
 
-export { Header };
+export { Header, Footer, NewBtn };

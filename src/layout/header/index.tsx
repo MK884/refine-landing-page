@@ -72,7 +72,7 @@ function Header() {
 
 export default Header;
 
-const NewBtn = () => {
+export const NewBtn = () => {
   return (
     <div className={style.new_btn}>
       <p>new</p>
