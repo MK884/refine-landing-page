@@ -51,8 +51,10 @@ function Community() {
         <div className={style.container}>
           <img src={investorsSrc} alt="investors" loading="lazy" />
           <div className={style.text}>
-            <p>Backed by <span>Y Combinator</span> (YC S23),</p>
-            <p><span>500 Emerging Europe</span> and <span> Senovo</span>.</p>
+            <p>
+              Backed by <span>Y Combinator</span> (YC S23), {" "}
+              <span>500 Emerging Europe</span> and <span> Senovo</span>.
+            </p>
           </div>
         </div>
       </div>
