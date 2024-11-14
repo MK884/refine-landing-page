@@ -27,18 +27,21 @@ function TabSlider({ data }: { data: Array<ITabs> }) {
 
   return (
     <div className={style.container}>
-      <div className={style.tabs}>
-        {data?.map((tab, idx) => (
-          <Tab
-            key={tab.title}
-            title={tab.title}
-            setPosition={setPillPosition}
-            onClick={() => setActiveTab(idx)}
-            setWidth={setInitialWidth}
-          />
-        ))}
-        <Pill position={pillPosition} />
+      <div className={style.head}>
+        <div className={style.tabs}>
+          {data?.map((tab, idx) => (
+            <Tab
+              key={tab.title}
+              title={tab.title}
+              setPosition={setPillPosition}
+              onClick={() => setActiveTab(idx)}
+              setWidth={setInitialWidth}
+            />
+          ))}
+          <Pill position={pillPosition} />
+        </div>
       </div>
+
       <div className={style.body}>{data[activeTab].body}</div>
       <div className={style.btn}>
         <Button

@@ -15,7 +15,7 @@
       font-size: 1rem;
       line-height: 1.5rem;
       color: var(--text-placeholder);
-      max-width: 400px;
+      width: 400px;
     }
   }
   .container {
@@ -95,6 +95,9 @@
 
 @include sm {
   .section {
+    .box {
+      padding-inline: 1rem;
+    }
     .container {
       flex-direction: column;
       gap: 1rem;
@@ -116,9 +119,21 @@
 }
 @include xs {
   .section {
+    .box {
+      padding-inline: 1rem;
+      h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      p {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
     .container {
       flex-direction: column;
       gap: 1rem;
+      margin-top: 2rem;
       .stage {
         border-radius: 1.5rem;
         width: 100%;

@@ -168,7 +168,7 @@ const SubElement = ({
         className={`${style.grid__container} ${style[`grid_col_${gridCol}`]}`}
       >
         {subItems?.map((item) => (
-          <NavSubItem item={item} key={item.title}/>
+          <NavSubItem item={item} key={item.title} />
         ))}
       </div>
       <div>{footer}</div>
@@ -239,6 +239,7 @@ function BurgerNav() {
 
   return (
     <div className={style.burger_nav}>
+      {isOpen && <div className={style.overlay} />}
       <div className={style.burger}>
         {isOpen ? (
           <IoClose size={28} onClick={togggleNav} />
@@ -294,7 +295,7 @@ const NavSections = ({
       {subItems && (
         <div className={`${style.nav_grid}`}>
           {subItems?.map((item) => (
-            <NavSubItem item={item} key={item.title}/>
+            <NavSubItem item={item} key={item.title} />
           ))}
         </div>
       )}
@@ -330,7 +331,7 @@ function MobileNav({
       {subItems && isOpen && (
         <div className={style.mob_nav_body}>
           {subItems?.map((item) => (
-            <NavSubItem item={item} key={item.title}/>
+            <NavSubItem item={item} key={item.title} />
           ))}
         </div>
       )}
