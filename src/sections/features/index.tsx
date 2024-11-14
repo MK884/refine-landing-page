@@ -104,22 +104,20 @@ function Features() {
                 );
               })}
             </div>
-            <div className={style.code}>
-              {features?.map((item, idx) => {
-                const src = theme === "dark" ? item.darkCode : item.lightCode;
-                return (
-                  <img
-                    key={idx}
-                    src={src}
-                    alt={item.name}
-                    style={{
-                      translate: activeIndex === idx ? "0% 0%" : "0% 100%",
-                      opacity: activeIndex === idx ? 1 : 0,
-                    }}
-                  />
-                );
-              })}
-            </div>
+            {features?.map((item, idx) => {
+              const src = theme === "dark" ? item.darkCode : item.lightCode;
+              return (
+                <div
+                  className={style.code}
+                  style={{
+                    bottom: activeIndex === idx ? "60px" : "-100%",
+                    opacity: activeIndex === idx ? 1 : 0,
+                  }}
+                >
+                  <img key={idx} src={src} alt={item.name} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

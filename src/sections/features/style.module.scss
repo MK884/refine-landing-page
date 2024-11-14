@@ -1,4 +1,5 @@
 @use "../../styles/colors";
+@use "../../styles/mixin" as *;
 
 .section {
   .box {
@@ -35,8 +36,6 @@
       display: flex;
 
       .info {
-        max-width: 416px;
-        margin-top: 4rem;
         h3 {
           line-height: 1.75rem;
           font-size: 1.25rem;
@@ -64,7 +63,10 @@
             width: max-content;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            width: max-content;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            gap: 0.25rem;
             justify-content: flex-start;
             z-index: 1;
             cursor: pointer;
@@ -113,16 +115,15 @@
         }
         .code {
           width: 488px;
-          translate: 50px -50px;
+          position: absolute;
+          transition: 0.5s ease-out;
           img {
             background-color: var(--page-default);
-            position: absolute;
-            height: auto;
-            max-width: 100%;
+            height: 100%;
+            width: 100%;
             border-radius: 0.75rem;
-            box-shadow: 2px 8px 50px  rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 8px 50px rgba(0, 0, 0, 0.2);
             object-fit: cover;
-            transition: .5s ease-out;
             z-index: 2;
           }
         }
@@ -130,7 +131,9 @@
     }
   }
 }
+
 .linear_gradient {
+  --angle: 100deg;
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -149,21 +152,179 @@
     --purple: #e1def4;
   }
   &.red {
-    background-image: linear-gradient(65deg, transparent 65%, var(--red));
+    background-image: linear-gradient(
+      var(--angle),
+      transparent 65%,
+      var(--red)
+    );
   }
   &.orange {
-    background-image: linear-gradient(65deg, transparent 65%, var(--orange));
+    background-image: linear-gradient(
+      var(--angle),
+      transparent 65%,
+      var(--orange)
+    );
   }
   &.yellow {
-    background-image: linear-gradient(65deg, transparent 65%, var(--yellow));
+    background-image: linear-gradient(
+      var(--angle),
+      transparent 65%,
+      var(--yellow)
+    );
   }
   &.cyan {
-    background-image: linear-gradient(65deg, transparent 65%, var(--cyan));
+    background-image: linear-gradient(
+      var(--angle),
+      transparent 65%,
+      var(--cyan)
+    );
   }
   &.blue {
-    background-image: linear-gradient(65deg, transparent 65%, var(--blue));
+    background-image: linear-gradient(
+      var(--angle),
+      transparent 65%,
+      var(--blue)
+    );
   }
   &.purple {
-    background-image: linear-gradient(65deg, transparent 65%, var(--purple));
+    background-image: linear-gradient(
+      var(--angle),
+      transparent 65%,
+      var(--purple)
+    );
+  }
+}
+
+// screens
+@include xs {
+  .section {
+    .box {
+      padding-inline: 1rem;
+      h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      p {
+        margin-top: 1rem;
+      }
+    }
+    .box_2 {
+      margin-top: 2rem;
+      .container {
+        height: 752px;
+        padding: 1rem 0rem 1rem 1rem;
+        flex-direction: column;
+        .info {
+          padding-right: 1.5rem;
+          h3 {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+          .grid {
+            margin-top: 1rem;
+            .btn {
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+          }
+        }
+        .content {
+          width: 100%;
+          padding-block: 1rem;
+          .image {
+            height: 400px;
+            transform: translateX(40px);
+          }
+          .code {
+            translate: -80px 70px;
+            transform: scale(0.7);
+          }
+        }
+      }
+    }
+  }
+  .linear_gradient {
+    --angle: 90deg;
+  }
+}
+@include sm {
+  .section {
+    .box {
+      padding-inline: 1rem;
+    }
+    .box_2 {
+      margin-top: 3rem;
+      .container {
+        height: 874px;
+        padding-top: 2.5rem;
+        padding-bottom: 1rem;
+        flex-direction: column;
+        .info {
+          max-width: 540px;
+          .grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+        }
+        .content {
+          width: 100%;
+          padding-block: 3rem;
+          .image {
+            transform: translateX(60px);
+          }
+          .code {
+            translate: -20px 60px;
+          }
+        }
+      }
+    }
+  }
+  .linear_gradient {
+    --angle: 95deg;
+  }
+}
+@include lg {
+  .section {
+    .box_2 {
+      margin-top: 3rem;
+      .container {
+        height: 984px;
+        padding-top: 2.5rem;
+        padding-bottom: 1rem;
+        flex-direction: column;
+        .info {
+          max-width: 760px;
+          .grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+        }
+        .content {
+          width: 100%;
+          padding-top: 5rem;
+          .image {
+            height: 600px;
+            transform: translateX(100px);
+          }
+          .code {
+            translate: -20px 70px;
+          }
+        }
+      }
+    }
+  }
+  .linear_gradient {
+    --angle: 90deg;
+  }
+}
+@include xl {
+  .section {
+    .box_2 {
+      .info {
+        max-width: 416px;
+        margin-top: 4rem;
+      }
+    }
+  }
+  .linear_gradient {
+    --angle: 65deg;
   }
 }
