@@ -108,13 +108,14 @@ function Features() {
               const src = theme === "dark" ? item.darkCode : item.lightCode;
               return (
                 <div
+                  key={idx}
                   className={style.code}
                   style={{
                     bottom: activeIndex === idx ? "60px" : "-100%",
                     opacity: activeIndex === idx ? 1 : 0,
                   }}
                 >
-                  <img key={idx} src={src} alt={item.name} />
+                  <img src={src} alt={item.name} />
                 </div>
               );
             })}

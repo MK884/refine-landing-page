@@ -19,6 +19,21 @@ function TabSlider({ data }: { data: Array<ITabs> }) {
 
   const [activeTab, setActiveTab] = React.useState<number>(0);
 
+  const tabRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollToTab = () => {
+    const left = pillPosition?.width
+      ? pillPosition.width * data?.length - 1 < pillPosition.left
+        ? pillPosition.width * data.length
+        : pillPosition.left / 2
+      : pillPosition.left / 2;
+    tabRef?.current?.scrollTo({ left });
+  };
+
+  React.useEffect(() => {
+    scrollToTab();
+  }, [pillPosition.left]);
+
   const setInitialWidth = (width: number) => {
     if (!pillPosition.width) {
       setPillPosition((prev) => ({ ...prev, width }));
@@ -27,19 +42,17 @@ function TabSlider({ data }: { data: Array<ITabs> }) {
 
   return (
     <div className={style.container}>
-      <div className={style.head}>
-        <div className={style.tabs}>
-          {data?.map((tab, idx) => (
-            <Tab
-              key={tab.title}
-              title={tab.title}
-              setPosition={setPillPosition}
-              onClick={() => setActiveTab(idx)}
-              setWidth={setInitialWidth}
-            />
-          ))}
-          <Pill position={pillPosition} />
-        </div>
+      <div className={style.tabs} ref={tabRef}>
+        {data?.map((tab, idx) => (
+          <Tab
+            key={tab.title}
+            title={tab.title}
+            setPosition={setPillPosition}
+            onClick={() => setActiveTab(idx)}
+            setWidth={setInitialWidth}
+          />
+        ))}
+        <Pill position={pillPosition} />
       </div>
 
       <div className={style.body}>{data[activeTab].body}</div>
