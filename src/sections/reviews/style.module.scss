@@ -1,4 +1,6 @@
 @use "../../styles/colors";
+@use "../../styles/mixin" as *;
+
 .section {
   display: flex;
   width: 100%;
@@ -101,4 +103,48 @@
       }
     }
   }
+}
+
+// screens
+@include xs {
+  .section {
+    .box {
+      padding-inline: 1rem;
+      h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+    .box_2 {
+      margin-top: 2rem;
+      .gallary {
+        columns: 1;
+      }
+    }
+  }
+}
+@include sm {
+  .section {
+    .box {
+      padding-inline: 1rem;
+    }
+    .box_2 {
+      margin-top: 3rem;
+      .gallary {
+        columns: 1;
+      }
+    }
+  }
+}
+@include lg {
+  .section {
+    .box_2 {
+      margin-top: 3rem;
+      .gallary {
+        columns: 2;
+      }
+    }
+  }
+}
+@include xl {
 }
