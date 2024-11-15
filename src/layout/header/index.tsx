@@ -15,11 +15,93 @@ import { FiMoon } from "react-icons/fi";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import { useTheme } from "@/context";
+import Algolia from "@/assets/algolia.svg?react";
+import { BsArrowReturnLeft } from "react-icons/bs";
+import { FaArrowUpLong } from "react-icons/fa6";
+import { FaArrowDownLong } from "react-icons/fa6";
 
 // main header
 function Header() {
+  const dialogRef = React.useRef<HTMLDialogElement>(null);
+
+  const openModal = () => {
+    dialogRef?.current?.showModal();
+  };
+
+  const closeDialog = () => dialogRef?.current?.close();
+
+  const handleClick = (e: Event) => {
+    if (dialogRef?.current && e.target === dialogRef.current) {
+      closeDialog();
+    }
+  };
+
+  const keyDownHandler = (e: KeyboardEvent) => {
+    if (e.ctrlKey && e.key === "k") {
+      e.preventDefault(); // preventing default behavior
+      dialogRef?.current?.showModal();
+      return;
+    }
+  };
+
+  React.useEffect(() => {
+    document.addEventListener("click", handleClick);
+
+    return () => document.removeEventListener("click", handleClick);
+  }, []);
+
+  React.useEffect(() => {
+    window.addEventListener("keydown", keyDownHandler);
+
+    return () => window.removeEventListener("keydown", keyDownHandler);
+  }, []);
+
   return (
     <header className={style.header}>
+      {/* search dialog */}
+      <dialog onClose={closeDialog} className={style.dialog} ref={dialogRef}>
+        <div className={style.dialog_box}>
+          <div className={style.sreach_box}>
+            <div className={style.search_input}>
+              <IoSearchOutline size={22} className={style.icon} />
+              <input type="text" autoFocus placeholder="Sreach docs" />
+            </div>
+            <div className={style.cancel} onClick={closeDialog}>
+              Cancel
+            </div>
+          </div>
+          <div className={style.sreaches}>No recent searches</div>
+          <div className={style.dialog_footer}>
+            <div className={style.keys}>
+              <div className={style.key}>
+                <button className={style.key_btn}>
+                  <BsArrowReturnLeft />
+                </button>
+                <p>to select</p>
+              </div>
+              <div className={style.key}>
+                <button className={style.key_btn}>
+                  <FaArrowUpLong size={10} />
+                </button>
+                <button className={style.key_btn}>
+                  <FaArrowDownLong size={10} />
+                </button>
+                <p>to navigate</p>
+              </div>
+              <div className={style.key}>
+                <button className={style.key_btn} style={{ fontSize: "10px" }}>
+                  esc
+                </button>
+                <p>to close</p>
+              </div>
+            </div>
+            <div className={style.algolia}>
+              Search by
+              <Algolia />
+            </div>
+          </div>
+        </div>
+      </dialog>
       <nav className={style.nav}>
         <div className={style.left}>
           <a href="" className={style.a}>
@@ -50,7 +132,7 @@ function Header() {
             <BurgerNav />
           </div>
           <div className={style.actions}>
-            <button className={style.button}>
+            <button className={style.button} onClick={openModal}>
               <IoSearchOutline size={18} />
               <p>Serach</p>
               <div className={style.key}>
