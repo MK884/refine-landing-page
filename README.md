@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Refin.dev Landing Page clone 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Refin.dev Landing Page clone** repository! This project is a showcase of my frontend development skills, built with **React**, **TypeScript**, and **SCSS**. The landing page is fully responsive and features smooth animations to deliver a polished user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
+- **Modern Animations**: Smooth transitions of elements enhance user engagement.
+- **Scalable Codebase**: Built with **React** and **TypeScript** for maintainability and scalability.
+- **Clean and Organized SCSS**: Modular styles for efficient styling.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: Library for building user interfaces.
+- **TypeScript**: Typed JavaScript for robust and error-free development.
+- **SCSS**: Preprocessor for efficient and maintainable CSS.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📸 Live demo
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+[demo](https://refine-landing-page.vercel.app/)
+
+## 🌐 Connect with Me
+
+If you enjoyed this project, Let me know your thoughts or feedback! 🙌
+
+- **Portfolio**: https://khalid-merchant.vercel.app/
+- **LinkedIn**: https://www.linkedin.com/in/merchant-khalid/
+- **Email**: [marchantkhalid7810@gmail.com](mailto:marchantkhalid7810@gmail.com)
