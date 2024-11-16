@@ -1,3 +1,4 @@
+import { links } from "@/constants";
 import { useTheme } from "@/context";
 import style from "./style.module.scss";
 
@@ -11,7 +12,7 @@ const cardData: Array<ICard> = [
   {
     title: "28.4K",
     caption: "Stars on GitHub",
-    href: "https://github.com/refinedev/refine",
+    href: links.github,
   },
   {
     title: "8K+",
@@ -52,7 +53,7 @@ function Community() {
           <img src={investorsSrc} alt="investors" loading="lazy" />
           <div className={style.text}>
             <p>
-              Backed by <span>Y Combinator</span> (YC S23), {" "}
+              Backed by <span>Y Combinator</span> (YC S23),{" "}
               <span>500 Emerging Europe</span> and <span> Senovo</span>.
             </p>
           </div>

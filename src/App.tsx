@@ -1,5 +1,12 @@
 import { Footer, Header } from "@/layout";
-import { Community, Features, GetStarted, HeroSection, Packages, Reviews } from "@/sections";
+import {
+  Community,
+  Features,
+  GetStarted,
+  HeroSection,
+  Packages,
+  Reviews,
+} from "@/sections";
 import "@/styles/app.scss";
 
 function App() {

@@ -5,7 +5,7 @@ import {
   TabBody,
   TabSlider,
 } from "@/components";
-import { tabsData } from "@/constants";
+import { links, tabsData } from "@/constants";
 import { CiPlay1 } from "react-icons/ci";
 import { FaStar } from "react-icons/fa6";
 import style from "./style.module.scss";
@@ -34,7 +34,7 @@ function HeroSection() {
     <section className={style.section}>
       <div className={style.info}>
         <button className={style.star_github}>
-          <a href="https://github.com/refinedev/refine" target="_blank">
+          <a href={links.github} target="_blank">
             <div className={style.btn}>
               <FaStar color="#ff9933" size={16} className={style.star} />
               <span>28.3K</span>
@@ -53,7 +53,7 @@ function HeroSection() {
           <Button
             text="See Docs"
             Icon={CiPlay1}
-            onClick={() => window.open("https://refine.dev/docs/", "_blank")}
+            onClick={() => window.open(links.documentation, "_blank")}
             IconSize={22}
           />
           <NpmButton />

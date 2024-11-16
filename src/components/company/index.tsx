@@ -1,6 +1,6 @@
+import { companies } from "@/constants";
 import React from "react";
 import style from "./style.module.scss";
-import { companies } from "@/constants";
 
 function CompanyTestimonial() {
   const DISPLAY_LIMIT = 6;

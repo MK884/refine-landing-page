@@ -1,9 +1,8 @@
 import { Button } from "@/components";
-import style from "./style.module.scss";
-import { CiCircleChevRight } from "react-icons/ci";
-import React from "react";
 import { reviews } from "@/constants";
-
+import React from "react";
+import { CiCircleChevRight } from "react-icons/ci";
+import style from "./style.module.scss";
 
 function Reviews() {
   const [isRevealed, setIsRevealed] = React.useState<boolean>(false);
@@ -17,13 +16,19 @@ function Reviews() {
           The <span>difference</span> that Refine makes
         </h2>
       </div>
-      <div className={style.box_2} style={{ height : isRevealed ? 'auto' : '20rem'}}>
-        <div className={style.gallary} >
+      <div
+        className={style.box_2}
+        style={{ height: isRevealed ? "auto" : "20rem" }}
+      >
+        <div className={style.gallary}>
           {reviews?.map((item, idx) => (
             <Card {...item} key={idx} />
           ))}
         </div>
-        <div className={style.action} style={{  backgroundImage: isRevealed ? 'unset' : undefined}}>
+        <div
+          className={style.action}
+          style={{ backgroundImage: isRevealed ? "unset" : undefined }}
+        >
           <div className={style.btn}>
             <Button
               text={isRevealed ? "Show less" : "Show more"}

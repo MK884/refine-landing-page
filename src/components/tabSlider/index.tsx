@@ -1,9 +1,9 @@
-import React from "react";
-import style from "./style.module.scss";
 import { Button, CodeBlock, DotWave } from "@/components";
-import { FaChevronRight } from "react-icons/fa";
-import { CiCircleChevRight } from "react-icons/ci";
 import { tabsData } from "@/constants";
+import React from "react";
+import { CiCircleChevRight } from "react-icons/ci";
+import { FaChevronRight } from "react-icons/fa";
+import style from "./style.module.scss";
 
 interface IPillPositions {
   left: number;
@@ -169,3 +169,4 @@ function TabBody({ item }: { item: ITabBody }) {
 }
 
 export { TabBody };
+

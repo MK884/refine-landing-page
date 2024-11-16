@@ -1,8 +1,7 @@
-import React from "react";
-import style from "./style.module.scss";
-import { IoSunnyOutline } from "react-icons/io5";
 import { useTheme } from "@/context";
 import { FiMoon } from "react-icons/fi";
+import { IoSunnyOutline } from "react-icons/io5";
+import style from "./style.module.scss";
 
 function ThemeButton() {
   const { theme, toggleTheme } = useTheme();

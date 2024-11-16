@@ -1,5 +1,5 @@
 import { Button, CodeBlock, ReactLogo } from "@/components";
-import { packages, UIPackages } from "@/constants";
+import { links, packages, UIPackages } from "@/constants";
 import { useTheme } from "@/context";
 import React from "react";
 import { CiCircleChevRight } from "react-icons/ci";
@@ -84,9 +84,7 @@ function Packages() {
                 <Button
                   text="All integrations"
                   Icon={CiCircleChevRight}
-                  onClick={() =>
-                    window.open("https://refine.dev/integrations/", "_blank")
-                  }
+                  onClick={() => window.open(links.integrations, "_blank")}
                   variant="outline"
                 />
               </div>
@@ -147,7 +145,7 @@ function Packages() {
               </p>
               <Button
                 text="Refine on GitHub"
-                onClick={() => {}}
+                onClick={() => window.open(links.github, "_blank")}
                 Icon={CiCircleChevRight}
                 variant="outline"
               />

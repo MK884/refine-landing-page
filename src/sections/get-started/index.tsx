@@ -1,6 +1,6 @@
-import style from "./syle.module.scss";
 import { Button, NpmButton } from "@/components";
 import { CiPlay1 } from "react-icons/ci";
+import style from "./syle.module.scss";
 
 function GetStarted() {
   return (

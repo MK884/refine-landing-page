@@ -88,6 +88,33 @@ interface IMenuIcon {
 
 export const npm_command = "npm create refine-app@latest";
 
+export const links = {
+  documentation: "https://refine.dev/docs/",
+  tutorial: "https://refine.dev/tutorial/essentials/intro/",
+  awesomeRefine: "https://github.com/refinedev/awesome-refine",
+  integrations: "https://refine.dev/integrations/",
+  templates: "https://refine.dev/templates/",
+  blog: "https://refine.dev/blog/",
+  contribution: "https://refine.dev/docs/guides-concepts/contributing/",
+  refineWeek: "https://refine.dev/week-of-refine/",
+  hackathons:
+    "https://github.com/refinedev/refine/blob/master/hackathon/refine-hackathon.md",
+  about: "https://refine.dev/about/",
+  store: "https://store.refine.dev",
+  contact: "https://store.refine.dev",
+  example: "https://example.crm.refine.dev/",
+  productHunt:
+    "https://www.producthunt.com/posts/refine-3?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-refine-3",
+  quickStart: "https://refine.dev/docs/getting-started/quickstart/",
+  reactAdmin: "https://reactadminpanel.com/",
+  enterprise: "https://refine.dev/enterprise/",
+  github: "https://github.com/refinedev/refine",
+  discord: "https://discord.com/invite/refine",
+  reddit: "https://www.reddit.com/r/refine/",
+  twitter: "https://x.com/refine_dev",
+  linkedin: "https://www.linkedin.com/company/refine-dev",
+};
+
 export const nav: Array<INav> = [
   {
     title: "Open-source",
@@ -99,7 +126,7 @@ export const nav: Array<INav> = [
         },
         title: "Documentation",
         caption: "Everything you need to get started.",
-        link: "https://refine.dev/docs/",
+        link: links.documentation,
       },
       {
         icon: {
@@ -108,7 +135,7 @@ export const nav: Array<INav> = [
         },
         title: "Tutorial",
         caption: "Create your first refine application.",
-        link: "https://refine.dev/tutorial/essentials/intro/",
+        link: links.tutorial,
       },
       {
         icon: {
@@ -117,7 +144,7 @@ export const nav: Array<INav> = [
         },
         title: "Awesome Refine",
         caption: "Repository of awesome things.",
-        link: "https://github.com/refinedev/awesome-refine",
+        link: links.awesomeRefine,
       },
       {
         icon: {
@@ -126,7 +153,7 @@ export const nav: Array<INav> = [
         },
         title: "Integration",
         caption: "Discover the refone ecosystem.",
-        link: "https://refine.dev/integrations/",
+        link: links.integrations,
       },
       {
         icon: {
@@ -135,7 +162,7 @@ export const nav: Array<INav> = [
         },
         title: "Templates",
         caption: "Ready-made examples for your project.",
-        link: "https://refine.dev/templates/",
+        link: links.templates,
       },
       {
         icon: {
@@ -144,7 +171,7 @@ export const nav: Array<INav> = [
         },
         title: "Blog",
         caption: "Articles about web development.",
-        link: "https://refine.dev/blog/",
+        link: links.blog,
       },
     ],
   },
@@ -161,7 +188,7 @@ export const nav: Array<INav> = [
         },
         title: "Contributing",
         caption: "Join open-source contributors.",
-        link: "https://refine.dev/docs/guides-concepts/contributing/",
+        link: links.contribution,
       },
       {
         icon: {
@@ -170,7 +197,7 @@ export const nav: Array<INav> = [
         },
         title: "Refine Week",
         caption: "Weekly projects to practice refine.",
-        link: "https://refine.dev/week-of-refine/",
+        link: links.refineWeek,
       },
       {
         icon: {
@@ -179,7 +206,7 @@ export const nav: Array<INav> = [
         },
         title: "Hackathons",
         caption: "Compete in hackathons and earn prizes!",
-        link: "https://github.com/refinedev/refine/blob/master/hackathon/refine-hackathon.md",
+        link: links.hackathons,
       },
     ],
   },
@@ -193,7 +220,7 @@ export const nav: Array<INav> = [
         },
         title: "About Refine",
         caption: "Team & company information.",
-        link: "https://refine.dev/about/",
+        link: links.about,
       },
       {
         icon: {
@@ -202,7 +229,7 @@ export const nav: Array<INav> = [
         },
         title: "Swag Store",
         caption: "T-shirts, caps & more!",
-        link: "https://store.refine.dev",
+        link: links.store,
       },
       {
         icon: {
@@ -211,24 +238,9 @@ export const nav: Array<INav> = [
         },
         title: "Meet Refine",
         caption: "Call us for any questions.",
-        link: "https://form.typeform.com/to/Z9wS06kE",
+        link: links.contact,
       },
     ],
-  },
-];
-
-export const img = [
-  {
-    src: "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/crm/base-render.png",
-  },
-  {
-    src: "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/finefoods/base_render-2.png",
-  },
-  {
-    src: "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/hr2/base_render.png",
-  },
-  {
-    src: "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/devops/base_render.png",
   },
 ];
 
@@ -237,7 +249,7 @@ export const tabsData: Array<ITabBody> = [
     src: "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/crm/base-render.png",
     name: "crm application",
     btnName: "See live demo",
-    href: "https://example.crm.refine.dev/",
+    href: links.example,
     items: [
       {
         id: 1,
@@ -308,7 +320,7 @@ export const tabsData: Array<ITabBody> = [
     src: "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/finefoods/base_render-2.png",
     name: "e-commerce application",
     btnName: "See live demo",
-    href: "https://example.crm.refine.dev/",
+    href: links.example,
     items: [
       {
         id: 7,
@@ -379,7 +391,7 @@ export const tabsData: Array<ITabBody> = [
     src: "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/hr2/base_render.png",
     name: "hr application",
     btnName: "Templates",
-    href: "https://refine.dev/templates/",
+    href: links.templates,
     items: [
       {
         id: 11,
@@ -480,7 +492,7 @@ export const tabsData: Array<ITabBody> = [
     src: "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/showcase-images/devops/base_render.png",
     name: "Devops application",
     btnName: "Templates",
-    href: "https://refine.dev/templates/",
+    href: links.templates,
     items: [
       {
         id: 16,
@@ -833,7 +845,6 @@ export const packages: Array<IPackage> = [
     npmCommand: "npm i refine-jsonapi",
   },
 ];
-
 
 export const reviews: Array<IReviews> = [
   {

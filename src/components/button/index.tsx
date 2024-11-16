@@ -1,8 +1,8 @@
-import React from "react";
-import style from "./style.module.scss";
-import { IconType } from "react-icons";
 import { npm_command } from "@/constants";
+import React from "react";
+import { IconType } from "react-icons";
 import { MdDone } from "react-icons/md";
+import style from "./style.module.scss";
 
 interface IButtonProps {
   onClick: React.MouseEventHandler<HTMLButtonElement>;

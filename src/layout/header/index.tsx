@@ -1,24 +1,29 @@
-import React from "react";
-import style from "./style.module.scss";
-import { Github, Refine, ThemeButton } from "@/components";
-import { FaGithub } from "react-icons/fa";
-import { IoSearchOutline } from "react-icons/io5";
-import { MdOutlineKeyboardCommandKey } from "react-icons/md";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { INav, ISubNav, nav } from "@/constants";
-import { FaDiscord } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { IoMenuOutline } from "react-icons/io5";
-import { IoClose } from "react-icons/io5";
-import { IoSunnyOutline } from "react-icons/io5";
-import { FiMoon } from "react-icons/fi";
-import { FaChevronRight } from "react-icons/fa";
-import { FaChevronDown } from "react-icons/fa";
-import { useTheme } from "@/context";
 import Algolia from "@/assets/algolia.svg?react";
+import { Github, Refine, ThemeButton } from "@/components";
+import { INav, ISubNav, links, nav } from "@/constants";
+import { useTheme } from "@/context";
+import React from "react";
 import { BsArrowReturnLeft } from "react-icons/bs";
-import { FaArrowUpLong } from "react-icons/fa6";
-import { FaArrowDownLong } from "react-icons/fa6";
+import {
+  FaChevronDown,
+  FaChevronRight,
+  FaDiscord,
+  FaGithub,
+  FaTwitter,
+} from "react-icons/fa";
+import { FaArrowDownLong, FaArrowUpLong } from "react-icons/fa6";
+import { FiMoon } from "react-icons/fi";
+import {
+  IoClose,
+  IoMenuOutline,
+  IoSearchOutline,
+  IoSunnyOutline,
+} from "react-icons/io5";
+import {
+  MdKeyboardArrowDown,
+  MdOutlineKeyboardCommandKey,
+} from "react-icons/md";
+import style from "./style.module.scss";
 
 // main header
 function Header() {
@@ -140,7 +145,10 @@ function Header() {
                 <p>K</p>
               </div>
             </button>
-            <button className={style.button}>
+            <button
+              className={style.button}
+              onClick={() => window.open(links.github, "_blank")}
+            >
               <FaGithub size={20} />
               28.3K
             </button>
@@ -171,11 +179,7 @@ const footerComponents = [
 
 function OpenSourceFooter() {
   return (
-    <a
-      className={style.os__footer}
-      href="https://github.com/refinedev/refine"
-      target="_blank"
-    >
+    <a className={style.os__footer} href={links.github} target="_blank">
       <span>
         <Github />
       </span>
@@ -189,13 +193,13 @@ function CommunityFooter() {
     <div className={style.com__footer}>
       <p>Join the party!</p>
       <div>
-        <a href="https://github.com/refinedev/refine" target="_blank">
+        <a href={links.github} target="_blank">
           <FaGithub size={18} color="var(--text-default)" />
         </a>
-        <a href="https://discord.com/invite/refine" target="_blank">
+        <a href={links.discord} target="_blank">
           <FaDiscord size={20} color="#5865f2" />
         </a>
-        <a href="https://x.com/refine_dev" target="_blank">
+        <a href={links.twitter} target="_blank">
           <FaTwitter size={20} color="#6EB3F7" />
         </a>
       </div>

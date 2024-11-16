@@ -5,4 +5,4 @@ import HeroSection from "./hero";
 import Packages from "./packages";
 import Reviews from "./reviews";
 
-export { HeroSection, Features, Packages, Community, Reviews, GetStarted };
+export { Community, Features, GetStarted, HeroSection, Packages, Reviews };

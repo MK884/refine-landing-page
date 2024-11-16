@@ -10,16 +10,5 @@ import TabSlider, { TabBody } from "./tabSlider";
 import ThemeButton from "./themeButton";
 
 export {
-  ThemeButton,
-  Refine,
-  Github,
-  TabSlider,
-  DotWave,
-  CodeBlock,
-  TabBody,
-  CompanyTestimonial,
-  Button,
-  NpmButton,
-  ReactLogo,
-  ProductHunt,
+  Button, CodeBlock, CompanyTestimonial, DotWave, Github, NpmButton, ProductHunt, ReactLogo, Refine, TabBody, TabSlider, ThemeButton
 };

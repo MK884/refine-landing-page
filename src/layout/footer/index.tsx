@@ -1,14 +1,10 @@
-import React from "react";
-import style from "./style.module.scss";
-import { SiRefine } from "react-icons/si";
 import { ProductHunt } from "@/components";
-import { FaRegHeart } from "react-icons/fa6";
-import { NewBtn } from "../header";
-import { FaGithub } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
-import { FaRedditAlien } from "react-icons/fa";
+import { links } from "@/constants";
 import { BsTwitterX } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaLinkedin, FaRedditAlien } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa6";
+import { SiRefine } from "react-icons/si";
+import style from "./style.module.scss";
 
 function Footer() {
   return (
@@ -20,7 +16,7 @@ function Footer() {
               <SiRefine size={32} />
             </a>
             <a
-              href="https://www.producthunt.com/posts/refine-3?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-refine-3"
+              href={links.productHunt}
               target="_blank"
               className={style.producthunt}
             >
@@ -40,22 +36,16 @@ function Footer() {
             <div className={style.resource}>
               <div className={style.title}>Resources</div>
               <div className={style.flex}>
-                <a
-                  href="https://refine.dev/docs/getting-started/quickstart/"
-                  target="_blank"
-                >
+                <a href={links.quickStart} target="_blank">
                   Getting Started
                 </a>
-                <a
-                  href="https://refine.dev/tutorial/essentials/intro/"
-                  target="_blank"
-                >
+                <a href={links.tutorial} target="_blank">
                   Tutorials
                 </a>
-                <a href="https://refine.dev/blog/" target="_blank">
+                <a href={links.blog} target="_blank">
                   Blog
                 </a>
-                <a href="https://reactadminpanel.com/" target="_blank">
+                <a href={links.reactAdmin} target="_blank">
                   React Admin Panel
                 </a>
               </div>
@@ -63,13 +53,13 @@ function Footer() {
             <div className={style.product}>
               <div className={style.title}>Product</div>
               <div className={style.flex}>
-                <a href="https://refine.dev/enterprise/" target="_blank">
+                <a href={links.enterprise} target="_blank">
                   Enterprise
                 </a>
-                <a href="https://refine.dev/templates/" target="_blank">
+                <a href={links.templates} target="_blank">
                   Templates
                 </a>
-                <a href="https://refine.dev/integrations/" target="_blank">
+                <a href={links.integrations} target="_blank">
                   Integrations
                 </a>
               </div>
@@ -77,13 +67,13 @@ function Footer() {
             <div className={style.company}>
               <div className={style.title}>Company</div>
               <div className={style.flex}>
-                <a href="https://refine.dev/about/" target="_blank">
+                <a href={links.about} target="_blank">
                   About
                 </a>
-                <a href="https://store.refine.dev/" target="_blank">
+                <a href={links.store} target="_blank">
                   Store
                 </a>
-                <a href="https://form.typeform.com/to/H54hLD9r" target="_blank">
+                <a href={links.contact} target="_blank">
                   Contact Us
                 </a>
               </div>
@@ -91,19 +81,19 @@ function Footer() {
             <div className={style.social}>
               <div className={style.title}>Join us on</div>
               <div className={style.flex_row}>
-                <a href="https://github.com/refinedev/refine" target="_blank">
+                <a href={links.github} target="_blank">
                   <FaGithub size={24} />
                 </a>
-                <a href="https://discord.com/invite/refine" target="_blank">
+                <a href={links.discord} target="_blank">
                   <FaDiscord size={24} />
                 </a>
-                <a href="https://www.reddit.com/r/refine/" target="_blank">
+                <a href={links.reddit} target="_blank">
                   <FaRedditAlien size={24} />
                 </a>
-                <a href="https://x.com/refine_dev" target="_blank">
+                <a href={links.twitter} target="_blank">
                   <BsTwitterX size={24} />
                 </a>
-                <a href="https://x.com/refine_dev" target="_blank">
+                <a href={links.linkedin} target="_blank">
                   <FaLinkedin size={24} />
                 </a>
               </div>
